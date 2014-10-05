@@ -24,7 +24,7 @@ ReadableWadlWindow::~ReadableWadlWindow()
 void ReadableWadlWindow::parseXml(){
     try {
 
-        unique_ptr<wadl::application> wadlParse(wadl::parseApplication("D:/projects-cpp/cpp-data-binding-wadl/application.wadl", xml_schema::flags::dont_validate)); // xml_schema::flags::dont_validate
+        unique_ptr<wadl::application> wadlParse(wadl::parseApplication("D:/projects-cpp/wadltool/application.wadl", xml_schema::flags::dont_validate)); // xml_schema::flags::dont_validate
         shared_ptr<wadl::application> app(std::move(wadlParse)); //convert to shared ptr for code completion to work
 
         //foreach (auto resourcesItr, app->getResources()) { // also works!
