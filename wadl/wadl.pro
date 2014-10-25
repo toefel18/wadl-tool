@@ -16,9 +16,18 @@ SUBDIRS = model
 HEADERS += \
     wadl.hxx \
     xml.hxx \
-    modelparser.h
+    modelparser.h \
+    restapp.h \
+    resource.h \
+    method.h \
+    queryparam.h \
+    httpmethod.h
 
 SOURCES += \
     wadl.cxx \
     xml.cxx \
-    modelparser.cpp
+    modelparser.cpp \
+    restapp.cpp \
+    resource.cpp \
+    method.cpp \
+    queryparam.cpp

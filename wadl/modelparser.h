@@ -1,21 +1,32 @@
 #ifndef MODELPARSER_H
 #define MODELPARSER_H
 
+#include "restapp.h"
+
 #include <string>
-namespace wadl {
+
+namespace wadlxsd {
     class resource;
 }
 
-class ModelParser
-{
-public:
-    ModelParser();
+namespace wadl {
 
-    void parseXml();
+    class ModelParser {
+    public:
+        ModelParser();
 
-private:
-    void printResource(std::string prefix, wadl::resource resource);
-    std::string extractMethods(wadl::resource method);
-};
+        void parseXml();
 
+        RestApp parseWadl(const std::string& location);
+
+    private:
+
+        void addResource(RestApp& app, Resource& parent);
+
+
+        void printResource(std::string prefix, wadlxsd::resource resource);
+        std::string extractMethods(wadlxsd::resource method);
+    };
+
+}
 #endif // MODELPARSER_H

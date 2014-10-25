@@ -40,7 +40,7 @@
 
 #include "wadl.hxx"
 
-namespace wadl
+namespace wadlxsd
 {
   // resource_type_list
   //
@@ -1941,7 +1941,7 @@ namespace wadl
 
 #include <xsd/cxx/xml/dom/parsing-source.hxx>
 
-namespace wadl
+namespace wadlxsd
 {
   // resource_type_list
   //
@@ -2090,11 +2090,11 @@ namespace wadl
   const HTTPMethods::value HTTPMethods::
   _xsd_HTTPMethods_indexes_[5] =
   {
-    ::wadl::HTTPMethods::DELETE,
-    ::wadl::HTTPMethods::GET,
-    ::wadl::HTTPMethods::HEAD,
-    ::wadl::HTTPMethods::POST,
-    ::wadl::HTTPMethods::PUT
+    ::wadlxsd::HTTPMethods::DELETE,
+    ::wadlxsd::HTTPMethods::GET,
+    ::wadlxsd::HTTPMethods::HEAD,
+    ::wadlxsd::HTTPMethods::POST,
+    ::wadlxsd::HTTPMethods::PUT
   };
 
   // uriList
@@ -2252,11 +2252,11 @@ namespace wadl
   const ParamStyle::value ParamStyle::
   _xsd_ParamStyle_indexes_[5] =
   {
-    ::wadl::ParamStyle::header,
-    ::wadl::ParamStyle::matrix,
-    ::wadl::ParamStyle::plain,
-    ::wadl::ParamStyle::query,
-    ::wadl::ParamStyle::template_
+    ::wadlxsd::ParamStyle::header,
+    ::wadlxsd::ParamStyle::matrix,
+    ::wadlxsd::ParamStyle::plain,
+    ::wadlxsd::ParamStyle::query,
+    ::wadlxsd::ParamStyle::template_
   };
 
   // application
@@ -4189,7 +4189,7 @@ namespace wadl
 
 #include <ostream>
 
-namespace wadl
+namespace wadlxsd
 {
   ::std::ostream&
   operator<< (::std::ostream& o, const resource_type_list& i)
@@ -4719,9 +4719,9 @@ namespace wadl
 #include <xsd/cxx/xml/sax/std-input-source.hxx>
 #include <xsd/cxx/tree/error-handler.hxx>
 
-namespace wadl
+namespace wadlxsd
 {
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::std::string& u,
                     ::xml_schema::flags f,
                     const ::xml_schema::properties& p)
@@ -4738,12 +4738,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::application > (
-      ::wadl::parseApplication (
+    return ::std::unique_ptr< ::wadlxsd::application > (
+      ::wadlxsd::parseApplication (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::std::string& u,
                     ::xml_schema::error_handler& h,
                     ::xml_schema::flags f,
@@ -4760,12 +4760,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::application > (
-      ::wadl::parseApplication (
+    return ::std::unique_ptr< ::wadlxsd::application > (
+      ::wadlxsd::parseApplication (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::std::string& u,
                     ::xercesc::DOMErrorHandler& h,
                     ::xml_schema::flags f,
@@ -4778,12 +4778,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::application > (
-      ::wadl::parseApplication (
+    return ::std::unique_ptr< ::wadlxsd::application > (
+      ::wadlxsd::parseApplication (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     ::xml_schema::flags f,
                     const ::xml_schema::properties& p)
@@ -4793,10 +4793,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseApplication (isrc, f, p);
+    return ::wadlxsd::parseApplication (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     ::xml_schema::error_handler& h,
                     ::xml_schema::flags f,
@@ -4807,20 +4807,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseApplication (isrc, h, f, p);
+    return ::wadlxsd::parseApplication (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     ::xercesc::DOMErrorHandler& h,
                     ::xml_schema::flags f,
                     const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseApplication (isrc, h, f, p);
+    return ::wadlxsd::parseApplication (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     const ::std::string& sid,
                     ::xml_schema::flags f,
@@ -4831,10 +4831,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseApplication (isrc, f, p);
+    return ::wadlxsd::parseApplication (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     const ::std::string& sid,
                     ::xml_schema::error_handler& h,
@@ -4846,10 +4846,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseApplication (isrc, h, f, p);
+    return ::wadlxsd::parseApplication (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     const ::std::string& sid,
                     ::xercesc::DOMErrorHandler& h,
@@ -4857,10 +4857,10 @@ namespace wadl
                     const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseApplication (isrc, h, f, p);
+    return ::wadlxsd::parseApplication (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xercesc::InputSource& i,
                     ::xml_schema::flags f,
                     const ::xml_schema::properties& p)
@@ -4873,12 +4873,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::application > (
-      ::wadl::parseApplication (
+    return ::std::unique_ptr< ::wadlxsd::application > (
+      ::wadlxsd::parseApplication (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xercesc::InputSource& i,
                     ::xml_schema::error_handler& h,
                     ::xml_schema::flags f,
@@ -4891,12 +4891,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::application > (
-      ::wadl::parseApplication (
+    return ::std::unique_ptr< ::wadlxsd::application > (
+      ::wadlxsd::parseApplication (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xercesc::InputSource& i,
                     ::xercesc::DOMErrorHandler& h,
                     ::xml_schema::flags f,
@@ -4909,12 +4909,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::application > (
-      ::wadl::parseApplication (
+    return ::std::unique_ptr< ::wadlxsd::application > (
+      ::wadlxsd::parseApplication (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::xercesc::DOMDocument& doc,
                     ::xml_schema::flags f,
                     const ::xml_schema::properties& p)
@@ -4924,8 +4924,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::application > (
-        ::wadl::parseApplication (
+      return ::std::unique_ptr< ::wadlxsd::application > (
+        ::wadlxsd::parseApplication (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -4936,8 +4936,8 @@ namespace wadl
     if (n.name () == "application" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::application > r (
-        ::xsd::cxx::tree::traits< ::wadl::application, char >::create (
+      ::std::unique_ptr< ::wadlxsd::application > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::application, char >::create (
           e, f, 0));
       return r;
     }
@@ -4949,7 +4949,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                     ::xml_schema::flags f,
                     const ::xml_schema::properties&)
@@ -4974,8 +4974,8 @@ namespace wadl
     if (n.name () == "application" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::application > r (
-        ::xsd::cxx::tree::traits< ::wadl::application, char >::create (
+      ::std::unique_ptr< ::wadlxsd::application > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::application, char >::create (
           e, f, 0));
       return r;
     }
@@ -4987,7 +4987,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::std::string& u,
             ::xml_schema::flags f,
             const ::xml_schema::properties& p)
@@ -5004,12 +5004,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::doc > (
-      ::wadl::parseDoc (
+    return ::std::unique_ptr< ::wadlxsd::doc > (
+      ::wadlxsd::parseDoc (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::std::string& u,
             ::xml_schema::error_handler& h,
             ::xml_schema::flags f,
@@ -5026,12 +5026,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::doc > (
-      ::wadl::parseDoc (
+    return ::std::unique_ptr< ::wadlxsd::doc > (
+      ::wadlxsd::parseDoc (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::std::string& u,
             ::xercesc::DOMErrorHandler& h,
             ::xml_schema::flags f,
@@ -5044,12 +5044,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::doc > (
-      ::wadl::parseDoc (
+    return ::std::unique_ptr< ::wadlxsd::doc > (
+      ::wadlxsd::parseDoc (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             ::xml_schema::flags f,
             const ::xml_schema::properties& p)
@@ -5059,10 +5059,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseDoc (isrc, f, p);
+    return ::wadlxsd::parseDoc (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             ::xml_schema::error_handler& h,
             ::xml_schema::flags f,
@@ -5073,20 +5073,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseDoc (isrc, h, f, p);
+    return ::wadlxsd::parseDoc (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             ::xercesc::DOMErrorHandler& h,
             ::xml_schema::flags f,
             const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseDoc (isrc, h, f, p);
+    return ::wadlxsd::parseDoc (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             const ::std::string& sid,
             ::xml_schema::flags f,
@@ -5097,10 +5097,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseDoc (isrc, f, p);
+    return ::wadlxsd::parseDoc (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             const ::std::string& sid,
             ::xml_schema::error_handler& h,
@@ -5112,10 +5112,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseDoc (isrc, h, f, p);
+    return ::wadlxsd::parseDoc (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             const ::std::string& sid,
             ::xercesc::DOMErrorHandler& h,
@@ -5123,10 +5123,10 @@ namespace wadl
             const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseDoc (isrc, h, f, p);
+    return ::wadlxsd::parseDoc (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xercesc::InputSource& i,
             ::xml_schema::flags f,
             const ::xml_schema::properties& p)
@@ -5139,12 +5139,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::doc > (
-      ::wadl::parseDoc (
+    return ::std::unique_ptr< ::wadlxsd::doc > (
+      ::wadlxsd::parseDoc (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xercesc::InputSource& i,
             ::xml_schema::error_handler& h,
             ::xml_schema::flags f,
@@ -5157,12 +5157,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::doc > (
-      ::wadl::parseDoc (
+    return ::std::unique_ptr< ::wadlxsd::doc > (
+      ::wadlxsd::parseDoc (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xercesc::InputSource& i,
             ::xercesc::DOMErrorHandler& h,
             ::xml_schema::flags f,
@@ -5175,12 +5175,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::doc > (
-      ::wadl::parseDoc (
+    return ::std::unique_ptr< ::wadlxsd::doc > (
+      ::wadlxsd::parseDoc (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::xercesc::DOMDocument& doc,
             ::xml_schema::flags f,
             const ::xml_schema::properties& p)
@@ -5190,8 +5190,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::doc > (
-        ::wadl::parseDoc (
+      return ::std::unique_ptr< ::wadlxsd::doc > (
+        ::wadlxsd::parseDoc (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -5202,8 +5202,8 @@ namespace wadl
     if (n.name () == "doc" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::doc > r (
-        ::xsd::cxx::tree::traits< ::wadl::doc, char >::create (
+      ::std::unique_ptr< ::wadlxsd::doc > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::doc, char >::create (
           e, f, 0));
       return r;
     }
@@ -5215,7 +5215,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
             ::xml_schema::flags f,
             const ::xml_schema::properties&)
@@ -5240,8 +5240,8 @@ namespace wadl
     if (n.name () == "doc" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::doc > r (
-        ::xsd::cxx::tree::traits< ::wadl::doc, char >::create (
+      ::std::unique_ptr< ::wadlxsd::doc > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::doc, char >::create (
           e, f, 0));
       return r;
     }
@@ -5253,7 +5253,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::std::string& u,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5270,12 +5270,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::grammars > (
-      ::wadl::parseGrammars (
+    return ::std::unique_ptr< ::wadlxsd::grammars > (
+      ::wadlxsd::parseGrammars (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::std::string& u,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -5292,12 +5292,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::grammars > (
-      ::wadl::parseGrammars (
+    return ::std::unique_ptr< ::wadlxsd::grammars > (
+      ::wadlxsd::parseGrammars (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::std::string& u,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
@@ -5310,12 +5310,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::grammars > (
-      ::wadl::parseGrammars (
+    return ::std::unique_ptr< ::wadlxsd::grammars > (
+      ::wadlxsd::parseGrammars (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5325,10 +5325,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseGrammars (isrc, f, p);
+    return ::wadlxsd::parseGrammars (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -5339,20 +5339,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseGrammars (isrc, h, f, p);
+    return ::wadlxsd::parseGrammars (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseGrammars (isrc, h, f, p);
+    return ::wadlxsd::parseGrammars (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  const ::std::string& sid,
                  ::xml_schema::flags f,
@@ -5363,10 +5363,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseGrammars (isrc, f, p);
+    return ::wadlxsd::parseGrammars (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  const ::std::string& sid,
                  ::xml_schema::error_handler& h,
@@ -5378,10 +5378,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseGrammars (isrc, h, f, p);
+    return ::wadlxsd::parseGrammars (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  const ::std::string& sid,
                  ::xercesc::DOMErrorHandler& h,
@@ -5389,10 +5389,10 @@ namespace wadl
                  const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseGrammars (isrc, h, f, p);
+    return ::wadlxsd::parseGrammars (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xercesc::InputSource& i,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5405,12 +5405,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::grammars > (
-      ::wadl::parseGrammars (
+    return ::std::unique_ptr< ::wadlxsd::grammars > (
+      ::wadlxsd::parseGrammars (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xercesc::InputSource& i,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -5423,12 +5423,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::grammars > (
-      ::wadl::parseGrammars (
+    return ::std::unique_ptr< ::wadlxsd::grammars > (
+      ::wadlxsd::parseGrammars (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xercesc::InputSource& i,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
@@ -5441,12 +5441,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::grammars > (
-      ::wadl::parseGrammars (
+    return ::std::unique_ptr< ::wadlxsd::grammars > (
+      ::wadlxsd::parseGrammars (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::xercesc::DOMDocument& doc,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5456,8 +5456,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::grammars > (
-        ::wadl::parseGrammars (
+      return ::std::unique_ptr< ::wadlxsd::grammars > (
+        ::wadlxsd::parseGrammars (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -5468,8 +5468,8 @@ namespace wadl
     if (n.name () == "grammars" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::grammars > r (
-        ::xsd::cxx::tree::traits< ::wadl::grammars, char >::create (
+      ::std::unique_ptr< ::wadlxsd::grammars > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::grammars, char >::create (
           e, f, 0));
       return r;
     }
@@ -5481,7 +5481,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties&)
@@ -5506,8 +5506,8 @@ namespace wadl
     if (n.name () == "grammars" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::grammars > r (
-        ::xsd::cxx::tree::traits< ::wadl::grammars, char >::create (
+      ::std::unique_ptr< ::wadlxsd::grammars > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::grammars, char >::create (
           e, f, 0));
       return r;
     }
@@ -5519,7 +5519,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::std::string& u,
                   ::xml_schema::flags f,
                   const ::xml_schema::properties& p)
@@ -5536,12 +5536,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::resources > (
-      ::wadl::parseResources (
+    return ::std::unique_ptr< ::wadlxsd::resources > (
+      ::wadlxsd::parseResources (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::std::string& u,
                   ::xml_schema::error_handler& h,
                   ::xml_schema::flags f,
@@ -5558,12 +5558,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resources > (
-      ::wadl::parseResources (
+    return ::std::unique_ptr< ::wadlxsd::resources > (
+      ::wadlxsd::parseResources (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::std::string& u,
                   ::xercesc::DOMErrorHandler& h,
                   ::xml_schema::flags f,
@@ -5576,12 +5576,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resources > (
-      ::wadl::parseResources (
+    return ::std::unique_ptr< ::wadlxsd::resources > (
+      ::wadlxsd::parseResources (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   ::xml_schema::flags f,
                   const ::xml_schema::properties& p)
@@ -5591,10 +5591,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResources (isrc, f, p);
+    return ::wadlxsd::parseResources (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   ::xml_schema::error_handler& h,
                   ::xml_schema::flags f,
@@ -5605,20 +5605,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResources (isrc, h, f, p);
+    return ::wadlxsd::parseResources (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   ::xercesc::DOMErrorHandler& h,
                   ::xml_schema::flags f,
                   const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResources (isrc, h, f, p);
+    return ::wadlxsd::parseResources (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   const ::std::string& sid,
                   ::xml_schema::flags f,
@@ -5629,10 +5629,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResources (isrc, f, p);
+    return ::wadlxsd::parseResources (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   const ::std::string& sid,
                   ::xml_schema::error_handler& h,
@@ -5644,10 +5644,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResources (isrc, h, f, p);
+    return ::wadlxsd::parseResources (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   const ::std::string& sid,
                   ::xercesc::DOMErrorHandler& h,
@@ -5655,10 +5655,10 @@ namespace wadl
                   const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResources (isrc, h, f, p);
+    return ::wadlxsd::parseResources (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xercesc::InputSource& i,
                   ::xml_schema::flags f,
                   const ::xml_schema::properties& p)
@@ -5671,12 +5671,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::resources > (
-      ::wadl::parseResources (
+    return ::std::unique_ptr< ::wadlxsd::resources > (
+      ::wadlxsd::parseResources (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xercesc::InputSource& i,
                   ::xml_schema::error_handler& h,
                   ::xml_schema::flags f,
@@ -5689,12 +5689,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resources > (
-      ::wadl::parseResources (
+    return ::std::unique_ptr< ::wadlxsd::resources > (
+      ::wadlxsd::parseResources (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xercesc::InputSource& i,
                   ::xercesc::DOMErrorHandler& h,
                   ::xml_schema::flags f,
@@ -5707,12 +5707,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resources > (
-      ::wadl::parseResources (
+    return ::std::unique_ptr< ::wadlxsd::resources > (
+      ::wadlxsd::parseResources (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::xercesc::DOMDocument& doc,
                   ::xml_schema::flags f,
                   const ::xml_schema::properties& p)
@@ -5722,8 +5722,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::resources > (
-        ::wadl::parseResources (
+      return ::std::unique_ptr< ::wadlxsd::resources > (
+        ::wadlxsd::parseResources (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -5734,8 +5734,8 @@ namespace wadl
     if (n.name () == "resources" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::resources > r (
-        ::xsd::cxx::tree::traits< ::wadl::resources, char >::create (
+      ::std::unique_ptr< ::wadlxsd::resources > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::resources, char >::create (
           e, f, 0));
       return r;
     }
@@ -5747,7 +5747,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                   ::xml_schema::flags f,
                   const ::xml_schema::properties&)
@@ -5772,8 +5772,8 @@ namespace wadl
     if (n.name () == "resources" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::resources > r (
-        ::xsd::cxx::tree::traits< ::wadl::resources, char >::create (
+      ::std::unique_ptr< ::wadlxsd::resources > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::resources, char >::create (
           e, f, 0));
       return r;
     }
@@ -5785,7 +5785,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::std::string& u,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5802,12 +5802,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::resource > (
-      ::wadl::parseResource (
+    return ::std::unique_ptr< ::wadlxsd::resource > (
+      ::wadlxsd::parseResource (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::std::string& u,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -5824,12 +5824,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource > (
-      ::wadl::parseResource (
+    return ::std::unique_ptr< ::wadlxsd::resource > (
+      ::wadlxsd::parseResource (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::std::string& u,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
@@ -5842,12 +5842,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource > (
-      ::wadl::parseResource (
+    return ::std::unique_ptr< ::wadlxsd::resource > (
+      ::wadlxsd::parseResource (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5857,10 +5857,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResource (isrc, f, p);
+    return ::wadlxsd::parseResource (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -5871,20 +5871,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResource (isrc, h, f, p);
+    return ::wadlxsd::parseResource (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResource (isrc, h, f, p);
+    return ::wadlxsd::parseResource (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  const ::std::string& sid,
                  ::xml_schema::flags f,
@@ -5895,10 +5895,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResource (isrc, f, p);
+    return ::wadlxsd::parseResource (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  const ::std::string& sid,
                  ::xml_schema::error_handler& h,
@@ -5910,10 +5910,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResource (isrc, h, f, p);
+    return ::wadlxsd::parseResource (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  const ::std::string& sid,
                  ::xercesc::DOMErrorHandler& h,
@@ -5921,10 +5921,10 @@ namespace wadl
                  const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResource (isrc, h, f, p);
+    return ::wadlxsd::parseResource (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xercesc::InputSource& i,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5937,12 +5937,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::resource > (
-      ::wadl::parseResource (
+    return ::std::unique_ptr< ::wadlxsd::resource > (
+      ::wadlxsd::parseResource (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xercesc::InputSource& i,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -5955,12 +5955,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource > (
-      ::wadl::parseResource (
+    return ::std::unique_ptr< ::wadlxsd::resource > (
+      ::wadlxsd::parseResource (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xercesc::InputSource& i,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
@@ -5973,12 +5973,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource > (
-      ::wadl::parseResource (
+    return ::std::unique_ptr< ::wadlxsd::resource > (
+      ::wadlxsd::parseResource (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::xercesc::DOMDocument& doc,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -5988,8 +5988,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::resource > (
-        ::wadl::parseResource (
+      return ::std::unique_ptr< ::wadlxsd::resource > (
+        ::wadlxsd::parseResource (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -6000,8 +6000,8 @@ namespace wadl
     if (n.name () == "resource" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::resource > r (
-        ::xsd::cxx::tree::traits< ::wadl::resource, char >::create (
+      ::std::unique_ptr< ::wadlxsd::resource > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::resource, char >::create (
           e, f, 0));
       return r;
     }
@@ -6013,7 +6013,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties&)
@@ -6038,8 +6038,8 @@ namespace wadl
     if (n.name () == "resource" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::resource > r (
-        ::xsd::cxx::tree::traits< ::wadl::resource, char >::create (
+      ::std::unique_ptr< ::wadlxsd::resource > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::resource, char >::create (
           e, f, 0));
       return r;
     }
@@ -6051,7 +6051,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::std::string& u,
                       ::xml_schema::flags f,
                       const ::xml_schema::properties& p)
@@ -6068,12 +6068,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::resource_type > (
-      ::wadl::parseResource_type (
+    return ::std::unique_ptr< ::wadlxsd::resource_type > (
+      ::wadlxsd::parseResource_type (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::std::string& u,
                       ::xml_schema::error_handler& h,
                       ::xml_schema::flags f,
@@ -6090,12 +6090,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource_type > (
-      ::wadl::parseResource_type (
+    return ::std::unique_ptr< ::wadlxsd::resource_type > (
+      ::wadlxsd::parseResource_type (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::std::string& u,
                       ::xercesc::DOMErrorHandler& h,
                       ::xml_schema::flags f,
@@ -6108,12 +6108,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource_type > (
-      ::wadl::parseResource_type (
+    return ::std::unique_ptr< ::wadlxsd::resource_type > (
+      ::wadlxsd::parseResource_type (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       ::xml_schema::flags f,
                       const ::xml_schema::properties& p)
@@ -6123,10 +6123,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResource_type (isrc, f, p);
+    return ::wadlxsd::parseResource_type (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       ::xml_schema::error_handler& h,
                       ::xml_schema::flags f,
@@ -6137,20 +6137,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResource_type (isrc, h, f, p);
+    return ::wadlxsd::parseResource_type (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       ::xercesc::DOMErrorHandler& h,
                       ::xml_schema::flags f,
                       const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResource_type (isrc, h, f, p);
+    return ::wadlxsd::parseResource_type (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       const ::std::string& sid,
                       ::xml_schema::flags f,
@@ -6161,10 +6161,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResource_type (isrc, f, p);
+    return ::wadlxsd::parseResource_type (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       const ::std::string& sid,
                       ::xml_schema::error_handler& h,
@@ -6176,10 +6176,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResource_type (isrc, h, f, p);
+    return ::wadlxsd::parseResource_type (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       const ::std::string& sid,
                       ::xercesc::DOMErrorHandler& h,
@@ -6187,10 +6187,10 @@ namespace wadl
                       const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResource_type (isrc, h, f, p);
+    return ::wadlxsd::parseResource_type (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xercesc::InputSource& i,
                       ::xml_schema::flags f,
                       const ::xml_schema::properties& p)
@@ -6203,12 +6203,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::resource_type > (
-      ::wadl::parseResource_type (
+    return ::std::unique_ptr< ::wadlxsd::resource_type > (
+      ::wadlxsd::parseResource_type (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xercesc::InputSource& i,
                       ::xml_schema::error_handler& h,
                       ::xml_schema::flags f,
@@ -6221,12 +6221,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource_type > (
-      ::wadl::parseResource_type (
+    return ::std::unique_ptr< ::wadlxsd::resource_type > (
+      ::wadlxsd::parseResource_type (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xercesc::InputSource& i,
                       ::xercesc::DOMErrorHandler& h,
                       ::xml_schema::flags f,
@@ -6239,12 +6239,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::resource_type > (
-      ::wadl::parseResource_type (
+    return ::std::unique_ptr< ::wadlxsd::resource_type > (
+      ::wadlxsd::parseResource_type (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::xercesc::DOMDocument& doc,
                       ::xml_schema::flags f,
                       const ::xml_schema::properties& p)
@@ -6254,8 +6254,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::resource_type > (
-        ::wadl::parseResource_type (
+      return ::std::unique_ptr< ::wadlxsd::resource_type > (
+        ::wadlxsd::parseResource_type (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -6266,8 +6266,8 @@ namespace wadl
     if (n.name () == "resource_type" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::resource_type > r (
-        ::xsd::cxx::tree::traits< ::wadl::resource_type, char >::create (
+      ::std::unique_ptr< ::wadlxsd::resource_type > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::resource_type, char >::create (
           e, f, 0));
       return r;
     }
@@ -6279,7 +6279,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                       ::xml_schema::flags f,
                       const ::xml_schema::properties&)
@@ -6304,8 +6304,8 @@ namespace wadl
     if (n.name () == "resource_type" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::resource_type > r (
-        ::xsd::cxx::tree::traits< ::wadl::resource_type, char >::create (
+      ::std::unique_ptr< ::wadlxsd::resource_type > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::resource_type, char >::create (
           e, f, 0));
       return r;
     }
@@ -6317,7 +6317,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::std::string& u,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -6334,12 +6334,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::method > (
-      ::wadl::parseMethod (
+    return ::std::unique_ptr< ::wadlxsd::method > (
+      ::wadlxsd::parseMethod (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::std::string& u,
                ::xml_schema::error_handler& h,
                ::xml_schema::flags f,
@@ -6356,12 +6356,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::method > (
-      ::wadl::parseMethod (
+    return ::std::unique_ptr< ::wadlxsd::method > (
+      ::wadlxsd::parseMethod (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::std::string& u,
                ::xercesc::DOMErrorHandler& h,
                ::xml_schema::flags f,
@@ -6374,12 +6374,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::method > (
-      ::wadl::parseMethod (
+    return ::std::unique_ptr< ::wadlxsd::method > (
+      ::wadlxsd::parseMethod (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -6389,10 +6389,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseMethod (isrc, f, p);
+    return ::wadlxsd::parseMethod (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                ::xml_schema::error_handler& h,
                ::xml_schema::flags f,
@@ -6403,20 +6403,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseMethod (isrc, h, f, p);
+    return ::wadlxsd::parseMethod (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                ::xercesc::DOMErrorHandler& h,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseMethod (isrc, h, f, p);
+    return ::wadlxsd::parseMethod (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                const ::std::string& sid,
                ::xml_schema::flags f,
@@ -6427,10 +6427,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseMethod (isrc, f, p);
+    return ::wadlxsd::parseMethod (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                const ::std::string& sid,
                ::xml_schema::error_handler& h,
@@ -6442,10 +6442,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseMethod (isrc, h, f, p);
+    return ::wadlxsd::parseMethod (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                const ::std::string& sid,
                ::xercesc::DOMErrorHandler& h,
@@ -6453,10 +6453,10 @@ namespace wadl
                const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseMethod (isrc, h, f, p);
+    return ::wadlxsd::parseMethod (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xercesc::InputSource& i,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -6469,12 +6469,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::method > (
-      ::wadl::parseMethod (
+    return ::std::unique_ptr< ::wadlxsd::method > (
+      ::wadlxsd::parseMethod (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xercesc::InputSource& i,
                ::xml_schema::error_handler& h,
                ::xml_schema::flags f,
@@ -6487,12 +6487,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::method > (
-      ::wadl::parseMethod (
+    return ::std::unique_ptr< ::wadlxsd::method > (
+      ::wadlxsd::parseMethod (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xercesc::InputSource& i,
                ::xercesc::DOMErrorHandler& h,
                ::xml_schema::flags f,
@@ -6505,12 +6505,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::method > (
-      ::wadl::parseMethod (
+    return ::std::unique_ptr< ::wadlxsd::method > (
+      ::wadlxsd::parseMethod (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::xercesc::DOMDocument& doc,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -6520,8 +6520,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::method > (
-        ::wadl::parseMethod (
+      return ::std::unique_ptr< ::wadlxsd::method > (
+        ::wadlxsd::parseMethod (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -6532,8 +6532,8 @@ namespace wadl
     if (n.name () == "method" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::method > r (
-        ::xsd::cxx::tree::traits< ::wadl::method, char >::create (
+      ::std::unique_ptr< ::wadlxsd::method > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::method, char >::create (
           e, f, 0));
       return r;
     }
@@ -6545,7 +6545,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                ::xml_schema::flags f,
                const ::xml_schema::properties&)
@@ -6570,8 +6570,8 @@ namespace wadl
     if (n.name () == "method" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::method > r (
-        ::xsd::cxx::tree::traits< ::wadl::method, char >::create (
+      ::std::unique_ptr< ::wadlxsd::method > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::method, char >::create (
           e, f, 0));
       return r;
     }
@@ -6583,7 +6583,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::std::string& u,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -6600,12 +6600,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::include > (
-      ::wadl::parseInclude (
+    return ::std::unique_ptr< ::wadlxsd::include > (
+      ::wadlxsd::parseInclude (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::std::string& u,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -6622,12 +6622,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::include > (
-      ::wadl::parseInclude (
+    return ::std::unique_ptr< ::wadlxsd::include > (
+      ::wadlxsd::parseInclude (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::std::string& u,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
@@ -6640,12 +6640,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::include > (
-      ::wadl::parseInclude (
+    return ::std::unique_ptr< ::wadlxsd::include > (
+      ::wadlxsd::parseInclude (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -6655,10 +6655,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseInclude (isrc, f, p);
+    return ::wadlxsd::parseInclude (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -6669,20 +6669,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseInclude (isrc, h, f, p);
+    return ::wadlxsd::parseInclude (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseInclude (isrc, h, f, p);
+    return ::wadlxsd::parseInclude (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 const ::std::string& sid,
                 ::xml_schema::flags f,
@@ -6693,10 +6693,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseInclude (isrc, f, p);
+    return ::wadlxsd::parseInclude (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 const ::std::string& sid,
                 ::xml_schema::error_handler& h,
@@ -6708,10 +6708,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseInclude (isrc, h, f, p);
+    return ::wadlxsd::parseInclude (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 const ::std::string& sid,
                 ::xercesc::DOMErrorHandler& h,
@@ -6719,10 +6719,10 @@ namespace wadl
                 const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseInclude (isrc, h, f, p);
+    return ::wadlxsd::parseInclude (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xercesc::InputSource& i,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -6735,12 +6735,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::include > (
-      ::wadl::parseInclude (
+    return ::std::unique_ptr< ::wadlxsd::include > (
+      ::wadlxsd::parseInclude (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xercesc::InputSource& i,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -6753,12 +6753,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::include > (
-      ::wadl::parseInclude (
+    return ::std::unique_ptr< ::wadlxsd::include > (
+      ::wadlxsd::parseInclude (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xercesc::InputSource& i,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
@@ -6771,12 +6771,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::include > (
-      ::wadl::parseInclude (
+    return ::std::unique_ptr< ::wadlxsd::include > (
+      ::wadlxsd::parseInclude (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::xercesc::DOMDocument& doc,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -6786,8 +6786,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::include > (
-        ::wadl::parseInclude (
+      return ::std::unique_ptr< ::wadlxsd::include > (
+        ::wadlxsd::parseInclude (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -6798,8 +6798,8 @@ namespace wadl
     if (n.name () == "include" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::include > r (
-        ::xsd::cxx::tree::traits< ::wadl::include, char >::create (
+      ::std::unique_ptr< ::wadlxsd::include > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::include, char >::create (
           e, f, 0));
       return r;
     }
@@ -6811,7 +6811,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties&)
@@ -6836,8 +6836,8 @@ namespace wadl
     if (n.name () == "include" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::include > r (
-        ::xsd::cxx::tree::traits< ::wadl::include, char >::create (
+      ::std::unique_ptr< ::wadlxsd::include > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::include, char >::create (
           e, f, 0));
       return r;
     }
@@ -6849,7 +6849,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::std::string& u,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -6866,12 +6866,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::request > (
-      ::wadl::parseRequest (
+    return ::std::unique_ptr< ::wadlxsd::request > (
+      ::wadlxsd::parseRequest (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::std::string& u,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -6888,12 +6888,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::request > (
-      ::wadl::parseRequest (
+    return ::std::unique_ptr< ::wadlxsd::request > (
+      ::wadlxsd::parseRequest (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::std::string& u,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
@@ -6906,12 +6906,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::request > (
-      ::wadl::parseRequest (
+    return ::std::unique_ptr< ::wadlxsd::request > (
+      ::wadlxsd::parseRequest (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -6921,10 +6921,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseRequest (isrc, f, p);
+    return ::wadlxsd::parseRequest (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -6935,20 +6935,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseRequest (isrc, h, f, p);
+    return ::wadlxsd::parseRequest (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseRequest (isrc, h, f, p);
+    return ::wadlxsd::parseRequest (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 const ::std::string& sid,
                 ::xml_schema::flags f,
@@ -6959,10 +6959,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseRequest (isrc, f, p);
+    return ::wadlxsd::parseRequest (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 const ::std::string& sid,
                 ::xml_schema::error_handler& h,
@@ -6974,10 +6974,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseRequest (isrc, h, f, p);
+    return ::wadlxsd::parseRequest (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 const ::std::string& sid,
                 ::xercesc::DOMErrorHandler& h,
@@ -6985,10 +6985,10 @@ namespace wadl
                 const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseRequest (isrc, h, f, p);
+    return ::wadlxsd::parseRequest (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xercesc::InputSource& i,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -7001,12 +7001,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::request > (
-      ::wadl::parseRequest (
+    return ::std::unique_ptr< ::wadlxsd::request > (
+      ::wadlxsd::parseRequest (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xercesc::InputSource& i,
                 ::xml_schema::error_handler& h,
                 ::xml_schema::flags f,
@@ -7019,12 +7019,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::request > (
-      ::wadl::parseRequest (
+    return ::std::unique_ptr< ::wadlxsd::request > (
+      ::wadlxsd::parseRequest (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xercesc::InputSource& i,
                 ::xercesc::DOMErrorHandler& h,
                 ::xml_schema::flags f,
@@ -7037,12 +7037,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::request > (
-      ::wadl::parseRequest (
+    return ::std::unique_ptr< ::wadlxsd::request > (
+      ::wadlxsd::parseRequest (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::xercesc::DOMDocument& doc,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties& p)
@@ -7052,8 +7052,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::request > (
-        ::wadl::parseRequest (
+      return ::std::unique_ptr< ::wadlxsd::request > (
+        ::wadlxsd::parseRequest (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -7064,8 +7064,8 @@ namespace wadl
     if (n.name () == "request" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::request > r (
-        ::xsd::cxx::tree::traits< ::wadl::request, char >::create (
+      ::std::unique_ptr< ::wadlxsd::request > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::request, char >::create (
           e, f, 0));
       return r;
     }
@@ -7077,7 +7077,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                 ::xml_schema::flags f,
                 const ::xml_schema::properties&)
@@ -7102,8 +7102,8 @@ namespace wadl
     if (n.name () == "request" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::request > r (
-        ::xsd::cxx::tree::traits< ::wadl::request, char >::create (
+      ::std::unique_ptr< ::wadlxsd::request > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::request, char >::create (
           e, f, 0));
       return r;
     }
@@ -7115,7 +7115,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::std::string& u,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -7132,12 +7132,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::response > (
-      ::wadl::parseResponse (
+    return ::std::unique_ptr< ::wadlxsd::response > (
+      ::wadlxsd::parseResponse (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::std::string& u,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -7154,12 +7154,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::response > (
-      ::wadl::parseResponse (
+    return ::std::unique_ptr< ::wadlxsd::response > (
+      ::wadlxsd::parseResponse (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::std::string& u,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
@@ -7172,12 +7172,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::response > (
-      ::wadl::parseResponse (
+    return ::std::unique_ptr< ::wadlxsd::response > (
+      ::wadlxsd::parseResponse (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -7187,10 +7187,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResponse (isrc, f, p);
+    return ::wadlxsd::parseResponse (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -7201,20 +7201,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResponse (isrc, h, f, p);
+    return ::wadlxsd::parseResponse (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseResponse (isrc, h, f, p);
+    return ::wadlxsd::parseResponse (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  const ::std::string& sid,
                  ::xml_schema::flags f,
@@ -7225,10 +7225,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResponse (isrc, f, p);
+    return ::wadlxsd::parseResponse (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  const ::std::string& sid,
                  ::xml_schema::error_handler& h,
@@ -7240,10 +7240,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResponse (isrc, h, f, p);
+    return ::wadlxsd::parseResponse (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  const ::std::string& sid,
                  ::xercesc::DOMErrorHandler& h,
@@ -7251,10 +7251,10 @@ namespace wadl
                  const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseResponse (isrc, h, f, p);
+    return ::wadlxsd::parseResponse (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xercesc::InputSource& i,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -7267,12 +7267,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::response > (
-      ::wadl::parseResponse (
+    return ::std::unique_ptr< ::wadlxsd::response > (
+      ::wadlxsd::parseResponse (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xercesc::InputSource& i,
                  ::xml_schema::error_handler& h,
                  ::xml_schema::flags f,
@@ -7285,12 +7285,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::response > (
-      ::wadl::parseResponse (
+    return ::std::unique_ptr< ::wadlxsd::response > (
+      ::wadlxsd::parseResponse (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xercesc::InputSource& i,
                  ::xercesc::DOMErrorHandler& h,
                  ::xml_schema::flags f,
@@ -7303,12 +7303,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::response > (
-      ::wadl::parseResponse (
+    return ::std::unique_ptr< ::wadlxsd::response > (
+      ::wadlxsd::parseResponse (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::xercesc::DOMDocument& doc,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties& p)
@@ -7318,8 +7318,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::response > (
-        ::wadl::parseResponse (
+      return ::std::unique_ptr< ::wadlxsd::response > (
+        ::wadlxsd::parseResponse (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -7330,8 +7330,8 @@ namespace wadl
     if (n.name () == "response" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::response > r (
-        ::xsd::cxx::tree::traits< ::wadl::response, char >::create (
+      ::std::unique_ptr< ::wadlxsd::response > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::response, char >::create (
           e, f, 0));
       return r;
     }
@@ -7343,7 +7343,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                  ::xml_schema::flags f,
                  const ::xml_schema::properties&)
@@ -7368,8 +7368,8 @@ namespace wadl
     if (n.name () == "response" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::response > r (
-        ::xsd::cxx::tree::traits< ::wadl::response, char >::create (
+      ::std::unique_ptr< ::wadlxsd::response > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::response, char >::create (
           e, f, 0));
       return r;
     }
@@ -7381,7 +7381,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::std::string& u,
                        ::xml_schema::flags f,
                        const ::xml_schema::properties& p)
@@ -7398,12 +7398,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::representation > (
-      ::wadl::parseRepresentation (
+    return ::std::unique_ptr< ::wadlxsd::representation > (
+      ::wadlxsd::parseRepresentation (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::std::string& u,
                        ::xml_schema::error_handler& h,
                        ::xml_schema::flags f,
@@ -7420,12 +7420,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::representation > (
-      ::wadl::parseRepresentation (
+    return ::std::unique_ptr< ::wadlxsd::representation > (
+      ::wadlxsd::parseRepresentation (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::std::string& u,
                        ::xercesc::DOMErrorHandler& h,
                        ::xml_schema::flags f,
@@ -7438,12 +7438,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::representation > (
-      ::wadl::parseRepresentation (
+    return ::std::unique_ptr< ::wadlxsd::representation > (
+      ::wadlxsd::parseRepresentation (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        ::xml_schema::flags f,
                        const ::xml_schema::properties& p)
@@ -7453,10 +7453,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseRepresentation (isrc, f, p);
+    return ::wadlxsd::parseRepresentation (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        ::xml_schema::error_handler& h,
                        ::xml_schema::flags f,
@@ -7467,20 +7467,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseRepresentation (isrc, h, f, p);
+    return ::wadlxsd::parseRepresentation (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        ::xercesc::DOMErrorHandler& h,
                        ::xml_schema::flags f,
                        const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseRepresentation (isrc, h, f, p);
+    return ::wadlxsd::parseRepresentation (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        const ::std::string& sid,
                        ::xml_schema::flags f,
@@ -7491,10 +7491,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseRepresentation (isrc, f, p);
+    return ::wadlxsd::parseRepresentation (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        const ::std::string& sid,
                        ::xml_schema::error_handler& h,
@@ -7506,10 +7506,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseRepresentation (isrc, h, f, p);
+    return ::wadlxsd::parseRepresentation (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        const ::std::string& sid,
                        ::xercesc::DOMErrorHandler& h,
@@ -7517,10 +7517,10 @@ namespace wadl
                        const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseRepresentation (isrc, h, f, p);
+    return ::wadlxsd::parseRepresentation (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xercesc::InputSource& i,
                        ::xml_schema::flags f,
                        const ::xml_schema::properties& p)
@@ -7533,12 +7533,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::representation > (
-      ::wadl::parseRepresentation (
+    return ::std::unique_ptr< ::wadlxsd::representation > (
+      ::wadlxsd::parseRepresentation (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xercesc::InputSource& i,
                        ::xml_schema::error_handler& h,
                        ::xml_schema::flags f,
@@ -7551,12 +7551,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::representation > (
-      ::wadl::parseRepresentation (
+    return ::std::unique_ptr< ::wadlxsd::representation > (
+      ::wadlxsd::parseRepresentation (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xercesc::InputSource& i,
                        ::xercesc::DOMErrorHandler& h,
                        ::xml_schema::flags f,
@@ -7569,12 +7569,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::representation > (
-      ::wadl::parseRepresentation (
+    return ::std::unique_ptr< ::wadlxsd::representation > (
+      ::wadlxsd::parseRepresentation (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::xercesc::DOMDocument& doc,
                        ::xml_schema::flags f,
                        const ::xml_schema::properties& p)
@@ -7584,8 +7584,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::representation > (
-        ::wadl::parseRepresentation (
+      return ::std::unique_ptr< ::wadlxsd::representation > (
+        ::wadlxsd::parseRepresentation (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -7596,8 +7596,8 @@ namespace wadl
     if (n.name () == "representation" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::representation > r (
-        ::xsd::cxx::tree::traits< ::wadl::representation, char >::create (
+      ::std::unique_ptr< ::wadlxsd::representation > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::representation, char >::create (
           e, f, 0));
       return r;
     }
@@ -7609,7 +7609,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                        ::xml_schema::flags f,
                        const ::xml_schema::properties&)
@@ -7634,8 +7634,8 @@ namespace wadl
     if (n.name () == "representation" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::representation > r (
-        ::xsd::cxx::tree::traits< ::wadl::representation, char >::create (
+      ::std::unique_ptr< ::wadlxsd::representation > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::representation, char >::create (
           e, f, 0));
       return r;
     }
@@ -7647,7 +7647,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::std::string& u,
               ::xml_schema::flags f,
               const ::xml_schema::properties& p)
@@ -7664,12 +7664,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::param > (
-      ::wadl::parseParam (
+    return ::std::unique_ptr< ::wadlxsd::param > (
+      ::wadlxsd::parseParam (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::std::string& u,
               ::xml_schema::error_handler& h,
               ::xml_schema::flags f,
@@ -7686,12 +7686,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::param > (
-      ::wadl::parseParam (
+    return ::std::unique_ptr< ::wadlxsd::param > (
+      ::wadlxsd::parseParam (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::std::string& u,
               ::xercesc::DOMErrorHandler& h,
               ::xml_schema::flags f,
@@ -7704,12 +7704,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::param > (
-      ::wadl::parseParam (
+    return ::std::unique_ptr< ::wadlxsd::param > (
+      ::wadlxsd::parseParam (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               ::xml_schema::flags f,
               const ::xml_schema::properties& p)
@@ -7719,10 +7719,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseParam (isrc, f, p);
+    return ::wadlxsd::parseParam (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               ::xml_schema::error_handler& h,
               ::xml_schema::flags f,
@@ -7733,20 +7733,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseParam (isrc, h, f, p);
+    return ::wadlxsd::parseParam (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               ::xercesc::DOMErrorHandler& h,
               ::xml_schema::flags f,
               const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseParam (isrc, h, f, p);
+    return ::wadlxsd::parseParam (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               const ::std::string& sid,
               ::xml_schema::flags f,
@@ -7757,10 +7757,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseParam (isrc, f, p);
+    return ::wadlxsd::parseParam (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               const ::std::string& sid,
               ::xml_schema::error_handler& h,
@@ -7772,10 +7772,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseParam (isrc, h, f, p);
+    return ::wadlxsd::parseParam (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               const ::std::string& sid,
               ::xercesc::DOMErrorHandler& h,
@@ -7783,10 +7783,10 @@ namespace wadl
               const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseParam (isrc, h, f, p);
+    return ::wadlxsd::parseParam (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xercesc::InputSource& i,
               ::xml_schema::flags f,
               const ::xml_schema::properties& p)
@@ -7799,12 +7799,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::param > (
-      ::wadl::parseParam (
+    return ::std::unique_ptr< ::wadlxsd::param > (
+      ::wadlxsd::parseParam (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xercesc::InputSource& i,
               ::xml_schema::error_handler& h,
               ::xml_schema::flags f,
@@ -7817,12 +7817,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::param > (
-      ::wadl::parseParam (
+    return ::std::unique_ptr< ::wadlxsd::param > (
+      ::wadlxsd::parseParam (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xercesc::InputSource& i,
               ::xercesc::DOMErrorHandler& h,
               ::xml_schema::flags f,
@@ -7835,12 +7835,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::param > (
-      ::wadl::parseParam (
+    return ::std::unique_ptr< ::wadlxsd::param > (
+      ::wadlxsd::parseParam (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::xercesc::DOMDocument& doc,
               ::xml_schema::flags f,
               const ::xml_schema::properties& p)
@@ -7850,8 +7850,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::param > (
-        ::wadl::parseParam (
+      return ::std::unique_ptr< ::wadlxsd::param > (
+        ::wadlxsd::parseParam (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -7862,8 +7862,8 @@ namespace wadl
     if (n.name () == "param" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::param > r (
-        ::xsd::cxx::tree::traits< ::wadl::param, char >::create (
+      ::std::unique_ptr< ::wadlxsd::param > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::param, char >::create (
           e, f, 0));
       return r;
     }
@@ -7875,7 +7875,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
               ::xml_schema::flags f,
               const ::xml_schema::properties&)
@@ -7900,8 +7900,8 @@ namespace wadl
     if (n.name () == "param" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::param > r (
-        ::xsd::cxx::tree::traits< ::wadl::param, char >::create (
+      ::std::unique_ptr< ::wadlxsd::param > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::param, char >::create (
           e, f, 0));
       return r;
     }
@@ -7913,7 +7913,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::std::string& u,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -7930,12 +7930,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::option > (
-      ::wadl::parseOption (
+    return ::std::unique_ptr< ::wadlxsd::option > (
+      ::wadlxsd::parseOption (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::std::string& u,
                ::xml_schema::error_handler& h,
                ::xml_schema::flags f,
@@ -7952,12 +7952,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::option > (
-      ::wadl::parseOption (
+    return ::std::unique_ptr< ::wadlxsd::option > (
+      ::wadlxsd::parseOption (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::std::string& u,
                ::xercesc::DOMErrorHandler& h,
                ::xml_schema::flags f,
@@ -7970,12 +7970,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::option > (
-      ::wadl::parseOption (
+    return ::std::unique_ptr< ::wadlxsd::option > (
+      ::wadlxsd::parseOption (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -7985,10 +7985,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseOption (isrc, f, p);
+    return ::wadlxsd::parseOption (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                ::xml_schema::error_handler& h,
                ::xml_schema::flags f,
@@ -7999,20 +7999,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseOption (isrc, h, f, p);
+    return ::wadlxsd::parseOption (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                ::xercesc::DOMErrorHandler& h,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseOption (isrc, h, f, p);
+    return ::wadlxsd::parseOption (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                const ::std::string& sid,
                ::xml_schema::flags f,
@@ -8023,10 +8023,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseOption (isrc, f, p);
+    return ::wadlxsd::parseOption (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                const ::std::string& sid,
                ::xml_schema::error_handler& h,
@@ -8038,10 +8038,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseOption (isrc, h, f, p);
+    return ::wadlxsd::parseOption (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                const ::std::string& sid,
                ::xercesc::DOMErrorHandler& h,
@@ -8049,10 +8049,10 @@ namespace wadl
                const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseOption (isrc, h, f, p);
+    return ::wadlxsd::parseOption (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xercesc::InputSource& i,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -8065,12 +8065,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::option > (
-      ::wadl::parseOption (
+    return ::std::unique_ptr< ::wadlxsd::option > (
+      ::wadlxsd::parseOption (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xercesc::InputSource& i,
                ::xml_schema::error_handler& h,
                ::xml_schema::flags f,
@@ -8083,12 +8083,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::option > (
-      ::wadl::parseOption (
+    return ::std::unique_ptr< ::wadlxsd::option > (
+      ::wadlxsd::parseOption (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xercesc::InputSource& i,
                ::xercesc::DOMErrorHandler& h,
                ::xml_schema::flags f,
@@ -8101,12 +8101,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::option > (
-      ::wadl::parseOption (
+    return ::std::unique_ptr< ::wadlxsd::option > (
+      ::wadlxsd::parseOption (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::xercesc::DOMDocument& doc,
                ::xml_schema::flags f,
                const ::xml_schema::properties& p)
@@ -8116,8 +8116,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::option > (
-        ::wadl::parseOption (
+      return ::std::unique_ptr< ::wadlxsd::option > (
+        ::wadlxsd::parseOption (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -8128,8 +8128,8 @@ namespace wadl
     if (n.name () == "option" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::option > r (
-        ::xsd::cxx::tree::traits< ::wadl::option, char >::create (
+      ::std::unique_ptr< ::wadlxsd::option > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::option, char >::create (
           e, f, 0));
       return r;
     }
@@ -8141,7 +8141,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                ::xml_schema::flags f,
                const ::xml_schema::properties&)
@@ -8166,8 +8166,8 @@ namespace wadl
     if (n.name () == "option" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::option > r (
-        ::xsd::cxx::tree::traits< ::wadl::option, char >::create (
+      ::std::unique_ptr< ::wadlxsd::option > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::option, char >::create (
           e, f, 0));
       return r;
     }
@@ -8179,7 +8179,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::std::string& u,
              ::xml_schema::flags f,
              const ::xml_schema::properties& p)
@@ -8196,12 +8196,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::link > (
-      ::wadl::parseLink (
+    return ::std::unique_ptr< ::wadlxsd::link > (
+      ::wadlxsd::parseLink (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::std::string& u,
              ::xml_schema::error_handler& h,
              ::xml_schema::flags f,
@@ -8218,12 +8218,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::link > (
-      ::wadl::parseLink (
+    return ::std::unique_ptr< ::wadlxsd::link > (
+      ::wadlxsd::parseLink (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::std::string& u,
              ::xercesc::DOMErrorHandler& h,
              ::xml_schema::flags f,
@@ -8236,12 +8236,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::link > (
-      ::wadl::parseLink (
+    return ::std::unique_ptr< ::wadlxsd::link > (
+      ::wadlxsd::parseLink (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              ::xml_schema::flags f,
              const ::xml_schema::properties& p)
@@ -8251,10 +8251,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseLink (isrc, f, p);
+    return ::wadlxsd::parseLink (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              ::xml_schema::error_handler& h,
              ::xml_schema::flags f,
@@ -8265,20 +8265,20 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseLink (isrc, h, f, p);
+    return ::wadlxsd::parseLink (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              ::xercesc::DOMErrorHandler& h,
              ::xml_schema::flags f,
              const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::wadl::parseLink (isrc, h, f, p);
+    return ::wadlxsd::parseLink (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              const ::std::string& sid,
              ::xml_schema::flags f,
@@ -8289,10 +8289,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseLink (isrc, f, p);
+    return ::wadlxsd::parseLink (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              const ::std::string& sid,
              ::xml_schema::error_handler& h,
@@ -8304,10 +8304,10 @@ namespace wadl
       (f & ::xml_schema::flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseLink (isrc, h, f, p);
+    return ::wadlxsd::parseLink (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              const ::std::string& sid,
              ::xercesc::DOMErrorHandler& h,
@@ -8315,10 +8315,10 @@ namespace wadl
              const ::xml_schema::properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::wadl::parseLink (isrc, h, f, p);
+    return ::wadlxsd::parseLink (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xercesc::InputSource& i,
              ::xml_schema::flags f,
              const ::xml_schema::properties& p)
@@ -8331,12 +8331,12 @@ namespace wadl
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::wadl::link > (
-      ::wadl::parseLink (
+    return ::std::unique_ptr< ::wadlxsd::link > (
+      ::wadlxsd::parseLink (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xercesc::InputSource& i,
              ::xml_schema::error_handler& h,
              ::xml_schema::flags f,
@@ -8349,12 +8349,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::link > (
-      ::wadl::parseLink (
+    return ::std::unique_ptr< ::wadlxsd::link > (
+      ::wadlxsd::parseLink (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xercesc::InputSource& i,
              ::xercesc::DOMErrorHandler& h,
              ::xml_schema::flags f,
@@ -8367,12 +8367,12 @@ namespace wadl
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::wadl::link > (
-      ::wadl::parseLink (
+    return ::std::unique_ptr< ::wadlxsd::link > (
+      ::wadlxsd::parseLink (
         std::move (d), f | ::xml_schema::flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::xercesc::DOMDocument& doc,
              ::xml_schema::flags f,
              const ::xml_schema::properties& p)
@@ -8382,8 +8382,8 @@ namespace wadl
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::wadl::link > (
-        ::wadl::parseLink (
+      return ::std::unique_ptr< ::wadlxsd::link > (
+        ::wadlxsd::parseLink (
           std::move (d), f | ::xml_schema::flags::own_dom, p));
     }
 
@@ -8394,8 +8394,8 @@ namespace wadl
     if (n.name () == "link" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::link > r (
-        ::xsd::cxx::tree::traits< ::wadl::link, char >::create (
+      ::std::unique_ptr< ::wadlxsd::link > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::link, char >::create (
           e, f, 0));
       return r;
     }
@@ -8407,7 +8407,7 @@ namespace wadl
       "http://wadl.dev.java.net/2009/02");
   }
 
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
              ::xml_schema::flags f,
              const ::xml_schema::properties&)
@@ -8432,8 +8432,8 @@ namespace wadl
     if (n.name () == "link" &&
         n.namespace_ () == "http://wadl.dev.java.net/2009/02")
     {
-      ::std::unique_ptr< ::wadl::link > r (
-        ::xsd::cxx::tree::traits< ::wadl::link, char >::create (
+      ::std::unique_ptr< ::wadlxsd::link > r (
+        ::xsd::cxx::tree::traits< ::wadlxsd::link, char >::create (
           e, f, 0));
       return r;
     }
@@ -8450,11 +8450,11 @@ namespace wadl
 #include <xsd/cxx/tree/error-handler.hxx>
 #include <xsd/cxx/xml/dom/serialization-source.hxx>
 
-namespace wadl
+namespace wadlxsd
 {
   void
   serializeApplication (::std::ostream& o,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         const ::xml_schema::namespace_infomap& m,
                         const ::std::string& e,
                         ::xml_schema::flags f)
@@ -8463,7 +8463,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeApplication (s, m, f));
+      ::wadlxsd::serializeApplication (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8476,7 +8476,7 @@ namespace wadl
 
   void
   serializeApplication (::std::ostream& o,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         ::xml_schema::error_handler& h,
                         const ::xml_schema::namespace_infomap& m,
                         const ::std::string& e,
@@ -8486,7 +8486,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeApplication (s, m, f));
+      ::wadlxsd::serializeApplication (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8496,14 +8496,14 @@ namespace wadl
 
   void
   serializeApplication (::std::ostream& o,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         ::xercesc::DOMErrorHandler& h,
                         const ::xml_schema::namespace_infomap& m,
                         const ::std::string& e,
                         ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeApplication (s, m, f));
+      ::wadlxsd::serializeApplication (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8513,13 +8513,13 @@ namespace wadl
 
   void
   serializeApplication (::xercesc::XMLFormatTarget& t,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         const ::xml_schema::namespace_infomap& m,
                         const ::std::string& e,
                         ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeApplication (s, m, f));
+      ::wadlxsd::serializeApplication (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8531,14 +8531,14 @@ namespace wadl
 
   void
   serializeApplication (::xercesc::XMLFormatTarget& t,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         ::xml_schema::error_handler& h,
                         const ::xml_schema::namespace_infomap& m,
                         const ::std::string& e,
                         ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeApplication (s, m, f));
+      ::wadlxsd::serializeApplication (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8547,14 +8547,14 @@ namespace wadl
 
   void
   serializeApplication (::xercesc::XMLFormatTarget& t,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         ::xercesc::DOMErrorHandler& h,
                         const ::xml_schema::namespace_infomap& m,
                         const ::std::string& e,
                         ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeApplication (s, m, f));
+      ::wadlxsd::serializeApplication (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8563,7 +8563,7 @@ namespace wadl
 
   void
   serializeApplication (::xercesc::DOMDocument& d,
-                        const ::wadl::application& s,
+                        const ::wadlxsd::application& s,
                         ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -8586,7 +8586,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeApplication (const ::wadl::application& s,
+  serializeApplication (const ::wadlxsd::application& s,
                         const ::xml_schema::namespace_infomap& m,
                         ::xml_schema::flags f)
   {
@@ -8596,13 +8596,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeApplication (*d, s, f);
+    ::wadlxsd::serializeApplication (*d, s, f);
     return d;
   }
 
   void
   serializeDoc (::std::ostream& o,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
@@ -8611,7 +8611,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeDoc (s, m, f));
+      ::wadlxsd::serializeDoc (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8624,7 +8624,7 @@ namespace wadl
 
   void
   serializeDoc (::std::ostream& o,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 ::xml_schema::error_handler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
@@ -8634,7 +8634,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeDoc (s, m, f));
+      ::wadlxsd::serializeDoc (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8644,14 +8644,14 @@ namespace wadl
 
   void
   serializeDoc (::std::ostream& o,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 ::xercesc::DOMErrorHandler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeDoc (s, m, f));
+      ::wadlxsd::serializeDoc (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8661,13 +8661,13 @@ namespace wadl
 
   void
   serializeDoc (::xercesc::XMLFormatTarget& t,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeDoc (s, m, f));
+      ::wadlxsd::serializeDoc (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8679,14 +8679,14 @@ namespace wadl
 
   void
   serializeDoc (::xercesc::XMLFormatTarget& t,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 ::xml_schema::error_handler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeDoc (s, m, f));
+      ::wadlxsd::serializeDoc (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8695,14 +8695,14 @@ namespace wadl
 
   void
   serializeDoc (::xercesc::XMLFormatTarget& t,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 ::xercesc::DOMErrorHandler& h,
                 const ::xml_schema::namespace_infomap& m,
                 const ::std::string& e,
                 ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeDoc (s, m, f));
+      ::wadlxsd::serializeDoc (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8711,7 +8711,7 @@ namespace wadl
 
   void
   serializeDoc (::xercesc::DOMDocument& d,
-                const ::wadl::doc& s,
+                const ::wadlxsd::doc& s,
                 ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -8734,7 +8734,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeDoc (const ::wadl::doc& s,
+  serializeDoc (const ::wadlxsd::doc& s,
                 const ::xml_schema::namespace_infomap& m,
                 ::xml_schema::flags f)
   {
@@ -8744,13 +8744,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeDoc (*d, s, f);
+    ::wadlxsd::serializeDoc (*d, s, f);
     return d;
   }
 
   void
   serializeGrammars (::std::ostream& o,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
@@ -8759,7 +8759,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeGrammars (s, m, f));
+      ::wadlxsd::serializeGrammars (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8772,7 +8772,7 @@ namespace wadl
 
   void
   serializeGrammars (::std::ostream& o,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      ::xml_schema::error_handler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
@@ -8782,7 +8782,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeGrammars (s, m, f));
+      ::wadlxsd::serializeGrammars (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8792,14 +8792,14 @@ namespace wadl
 
   void
   serializeGrammars (::std::ostream& o,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      ::xercesc::DOMErrorHandler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeGrammars (s, m, f));
+      ::wadlxsd::serializeGrammars (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8809,13 +8809,13 @@ namespace wadl
 
   void
   serializeGrammars (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeGrammars (s, m, f));
+      ::wadlxsd::serializeGrammars (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8827,14 +8827,14 @@ namespace wadl
 
   void
   serializeGrammars (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      ::xml_schema::error_handler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeGrammars (s, m, f));
+      ::wadlxsd::serializeGrammars (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8843,14 +8843,14 @@ namespace wadl
 
   void
   serializeGrammars (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      ::xercesc::DOMErrorHandler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeGrammars (s, m, f));
+      ::wadlxsd::serializeGrammars (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8859,7 +8859,7 @@ namespace wadl
 
   void
   serializeGrammars (::xercesc::DOMDocument& d,
-                     const ::wadl::grammars& s,
+                     const ::wadlxsd::grammars& s,
                      ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -8882,7 +8882,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeGrammars (const ::wadl::grammars& s,
+  serializeGrammars (const ::wadlxsd::grammars& s,
                      const ::xml_schema::namespace_infomap& m,
                      ::xml_schema::flags f)
   {
@@ -8892,13 +8892,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeGrammars (*d, s, f);
+    ::wadlxsd::serializeGrammars (*d, s, f);
     return d;
   }
 
   void
   serializeResources (::std::ostream& o,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       const ::xml_schema::namespace_infomap& m,
                       const ::std::string& e,
                       ::xml_schema::flags f)
@@ -8907,7 +8907,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResources (s, m, f));
+      ::wadlxsd::serializeResources (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8920,7 +8920,7 @@ namespace wadl
 
   void
   serializeResources (::std::ostream& o,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       ::xml_schema::error_handler& h,
                       const ::xml_schema::namespace_infomap& m,
                       const ::std::string& e,
@@ -8930,7 +8930,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResources (s, m, f));
+      ::wadlxsd::serializeResources (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8940,14 +8940,14 @@ namespace wadl
 
   void
   serializeResources (::std::ostream& o,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       ::xercesc::DOMErrorHandler& h,
                       const ::xml_schema::namespace_infomap& m,
                       const ::std::string& e,
                       ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResources (s, m, f));
+      ::wadlxsd::serializeResources (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -8957,13 +8957,13 @@ namespace wadl
 
   void
   serializeResources (::xercesc::XMLFormatTarget& t,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       const ::xml_schema::namespace_infomap& m,
                       const ::std::string& e,
                       ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResources (s, m, f));
+      ::wadlxsd::serializeResources (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -8975,14 +8975,14 @@ namespace wadl
 
   void
   serializeResources (::xercesc::XMLFormatTarget& t,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       ::xml_schema::error_handler& h,
                       const ::xml_schema::namespace_infomap& m,
                       const ::std::string& e,
                       ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResources (s, m, f));
+      ::wadlxsd::serializeResources (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -8991,14 +8991,14 @@ namespace wadl
 
   void
   serializeResources (::xercesc::XMLFormatTarget& t,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       ::xercesc::DOMErrorHandler& h,
                       const ::xml_schema::namespace_infomap& m,
                       const ::std::string& e,
                       ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResources (s, m, f));
+      ::wadlxsd::serializeResources (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9007,7 +9007,7 @@ namespace wadl
 
   void
   serializeResources (::xercesc::DOMDocument& d,
-                      const ::wadl::resources& s,
+                      const ::wadlxsd::resources& s,
                       ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9030,7 +9030,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResources (const ::wadl::resources& s,
+  serializeResources (const ::wadlxsd::resources& s,
                       const ::xml_schema::namespace_infomap& m,
                       ::xml_schema::flags f)
   {
@@ -9040,13 +9040,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeResources (*d, s, f);
+    ::wadlxsd::serializeResources (*d, s, f);
     return d;
   }
 
   void
   serializeResource (::std::ostream& o,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
@@ -9055,7 +9055,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource (s, m, f));
+      ::wadlxsd::serializeResource (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9068,7 +9068,7 @@ namespace wadl
 
   void
   serializeResource (::std::ostream& o,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      ::xml_schema::error_handler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
@@ -9078,7 +9078,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource (s, m, f));
+      ::wadlxsd::serializeResource (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9088,14 +9088,14 @@ namespace wadl
 
   void
   serializeResource (::std::ostream& o,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      ::xercesc::DOMErrorHandler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource (s, m, f));
+      ::wadlxsd::serializeResource (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9105,13 +9105,13 @@ namespace wadl
 
   void
   serializeResource (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource (s, m, f));
+      ::wadlxsd::serializeResource (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9123,14 +9123,14 @@ namespace wadl
 
   void
   serializeResource (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      ::xml_schema::error_handler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource (s, m, f));
+      ::wadlxsd::serializeResource (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9139,14 +9139,14 @@ namespace wadl
 
   void
   serializeResource (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      ::xercesc::DOMErrorHandler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource (s, m, f));
+      ::wadlxsd::serializeResource (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9155,7 +9155,7 @@ namespace wadl
 
   void
   serializeResource (::xercesc::DOMDocument& d,
-                     const ::wadl::resource& s,
+                     const ::wadlxsd::resource& s,
                      ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9178,7 +9178,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResource (const ::wadl::resource& s,
+  serializeResource (const ::wadlxsd::resource& s,
                      const ::xml_schema::namespace_infomap& m,
                      ::xml_schema::flags f)
   {
@@ -9188,7 +9188,7 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeResource (*d, s, f);
+    ::wadlxsd::serializeResource (*d, s, f);
     return d;
   }
 
@@ -9213,7 +9213,7 @@ namespace wadl
 
   void
   serializeResource_type (::std::ostream& o,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           const ::xml_schema::namespace_infomap& m,
                           const ::std::string& e,
                           ::xml_schema::flags f)
@@ -9222,7 +9222,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource_type (s, m, f));
+      ::wadlxsd::serializeResource_type (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9235,7 +9235,7 @@ namespace wadl
 
   void
   serializeResource_type (::std::ostream& o,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           ::xml_schema::error_handler& h,
                           const ::xml_schema::namespace_infomap& m,
                           const ::std::string& e,
@@ -9245,7 +9245,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource_type (s, m, f));
+      ::wadlxsd::serializeResource_type (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9255,14 +9255,14 @@ namespace wadl
 
   void
   serializeResource_type (::std::ostream& o,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           ::xercesc::DOMErrorHandler& h,
                           const ::xml_schema::namespace_infomap& m,
                           const ::std::string& e,
                           ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource_type (s, m, f));
+      ::wadlxsd::serializeResource_type (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9272,13 +9272,13 @@ namespace wadl
 
   void
   serializeResource_type (::xercesc::XMLFormatTarget& t,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           const ::xml_schema::namespace_infomap& m,
                           const ::std::string& e,
                           ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource_type (s, m, f));
+      ::wadlxsd::serializeResource_type (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9290,14 +9290,14 @@ namespace wadl
 
   void
   serializeResource_type (::xercesc::XMLFormatTarget& t,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           ::xml_schema::error_handler& h,
                           const ::xml_schema::namespace_infomap& m,
                           const ::std::string& e,
                           ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource_type (s, m, f));
+      ::wadlxsd::serializeResource_type (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9306,14 +9306,14 @@ namespace wadl
 
   void
   serializeResource_type (::xercesc::XMLFormatTarget& t,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           ::xercesc::DOMErrorHandler& h,
                           const ::xml_schema::namespace_infomap& m,
                           const ::std::string& e,
                           ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResource_type (s, m, f));
+      ::wadlxsd::serializeResource_type (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9322,7 +9322,7 @@ namespace wadl
 
   void
   serializeResource_type (::xercesc::DOMDocument& d,
-                          const ::wadl::resource_type& s,
+                          const ::wadlxsd::resource_type& s,
                           ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9345,7 +9345,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResource_type (const ::wadl::resource_type& s,
+  serializeResource_type (const ::wadlxsd::resource_type& s,
                           const ::xml_schema::namespace_infomap& m,
                           ::xml_schema::flags f)
   {
@@ -9355,13 +9355,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeResource_type (*d, s, f);
+    ::wadlxsd::serializeResource_type (*d, s, f);
     return d;
   }
 
   void
   serializeMethod (::std::ostream& o,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
@@ -9370,7 +9370,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeMethod (s, m, f));
+      ::wadlxsd::serializeMethod (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9383,7 +9383,7 @@ namespace wadl
 
   void
   serializeMethod (::std::ostream& o,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    ::xml_schema::error_handler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
@@ -9393,7 +9393,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeMethod (s, m, f));
+      ::wadlxsd::serializeMethod (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9403,14 +9403,14 @@ namespace wadl
 
   void
   serializeMethod (::std::ostream& o,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    ::xercesc::DOMErrorHandler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeMethod (s, m, f));
+      ::wadlxsd::serializeMethod (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9420,13 +9420,13 @@ namespace wadl
 
   void
   serializeMethod (::xercesc::XMLFormatTarget& t,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeMethod (s, m, f));
+      ::wadlxsd::serializeMethod (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9438,14 +9438,14 @@ namespace wadl
 
   void
   serializeMethod (::xercesc::XMLFormatTarget& t,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    ::xml_schema::error_handler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeMethod (s, m, f));
+      ::wadlxsd::serializeMethod (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9454,14 +9454,14 @@ namespace wadl
 
   void
   serializeMethod (::xercesc::XMLFormatTarget& t,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    ::xercesc::DOMErrorHandler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeMethod (s, m, f));
+      ::wadlxsd::serializeMethod (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9470,7 +9470,7 @@ namespace wadl
 
   void
   serializeMethod (::xercesc::DOMDocument& d,
-                   const ::wadl::method& s,
+                   const ::wadlxsd::method& s,
                    ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9493,7 +9493,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeMethod (const ::wadl::method& s,
+  serializeMethod (const ::wadlxsd::method& s,
                    const ::xml_schema::namespace_infomap& m,
                    ::xml_schema::flags f)
   {
@@ -9503,7 +9503,7 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeMethod (*d, s, f);
+    ::wadlxsd::serializeMethod (*d, s, f);
     return d;
   }
 
@@ -9547,7 +9547,7 @@ namespace wadl
 
   void
   serializeInclude (::std::ostream& o,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
@@ -9556,7 +9556,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeInclude (s, m, f));
+      ::wadlxsd::serializeInclude (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9569,7 +9569,7 @@ namespace wadl
 
   void
   serializeInclude (::std::ostream& o,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     ::xml_schema::error_handler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
@@ -9579,7 +9579,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeInclude (s, m, f));
+      ::wadlxsd::serializeInclude (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9589,14 +9589,14 @@ namespace wadl
 
   void
   serializeInclude (::std::ostream& o,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     ::xercesc::DOMErrorHandler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeInclude (s, m, f));
+      ::wadlxsd::serializeInclude (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9606,13 +9606,13 @@ namespace wadl
 
   void
   serializeInclude (::xercesc::XMLFormatTarget& t,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeInclude (s, m, f));
+      ::wadlxsd::serializeInclude (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9624,14 +9624,14 @@ namespace wadl
 
   void
   serializeInclude (::xercesc::XMLFormatTarget& t,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     ::xml_schema::error_handler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeInclude (s, m, f));
+      ::wadlxsd::serializeInclude (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9640,14 +9640,14 @@ namespace wadl
 
   void
   serializeInclude (::xercesc::XMLFormatTarget& t,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     ::xercesc::DOMErrorHandler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeInclude (s, m, f));
+      ::wadlxsd::serializeInclude (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9656,7 +9656,7 @@ namespace wadl
 
   void
   serializeInclude (::xercesc::DOMDocument& d,
-                    const ::wadl::include& s,
+                    const ::wadlxsd::include& s,
                     ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9679,7 +9679,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeInclude (const ::wadl::include& s,
+  serializeInclude (const ::wadlxsd::include& s,
                     const ::xml_schema::namespace_infomap& m,
                     ::xml_schema::flags f)
   {
@@ -9689,13 +9689,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeInclude (*d, s, f);
+    ::wadlxsd::serializeInclude (*d, s, f);
     return d;
   }
 
   void
   serializeRequest (::std::ostream& o,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
@@ -9704,7 +9704,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRequest (s, m, f));
+      ::wadlxsd::serializeRequest (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9717,7 +9717,7 @@ namespace wadl
 
   void
   serializeRequest (::std::ostream& o,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     ::xml_schema::error_handler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
@@ -9727,7 +9727,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRequest (s, m, f));
+      ::wadlxsd::serializeRequest (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9737,14 +9737,14 @@ namespace wadl
 
   void
   serializeRequest (::std::ostream& o,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     ::xercesc::DOMErrorHandler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRequest (s, m, f));
+      ::wadlxsd::serializeRequest (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9754,13 +9754,13 @@ namespace wadl
 
   void
   serializeRequest (::xercesc::XMLFormatTarget& t,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRequest (s, m, f));
+      ::wadlxsd::serializeRequest (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9772,14 +9772,14 @@ namespace wadl
 
   void
   serializeRequest (::xercesc::XMLFormatTarget& t,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     ::xml_schema::error_handler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRequest (s, m, f));
+      ::wadlxsd::serializeRequest (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9788,14 +9788,14 @@ namespace wadl
 
   void
   serializeRequest (::xercesc::XMLFormatTarget& t,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     ::xercesc::DOMErrorHandler& h,
                     const ::xml_schema::namespace_infomap& m,
                     const ::std::string& e,
                     ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRequest (s, m, f));
+      ::wadlxsd::serializeRequest (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9804,7 +9804,7 @@ namespace wadl
 
   void
   serializeRequest (::xercesc::DOMDocument& d,
-                    const ::wadl::request& s,
+                    const ::wadlxsd::request& s,
                     ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9827,7 +9827,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeRequest (const ::wadl::request& s,
+  serializeRequest (const ::wadlxsd::request& s,
                     const ::xml_schema::namespace_infomap& m,
                     ::xml_schema::flags f)
   {
@@ -9837,13 +9837,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeRequest (*d, s, f);
+    ::wadlxsd::serializeRequest (*d, s, f);
     return d;
   }
 
   void
   serializeResponse (::std::ostream& o,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
@@ -9852,7 +9852,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResponse (s, m, f));
+      ::wadlxsd::serializeResponse (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9865,7 +9865,7 @@ namespace wadl
 
   void
   serializeResponse (::std::ostream& o,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      ::xml_schema::error_handler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
@@ -9875,7 +9875,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResponse (s, m, f));
+      ::wadlxsd::serializeResponse (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9885,14 +9885,14 @@ namespace wadl
 
   void
   serializeResponse (::std::ostream& o,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      ::xercesc::DOMErrorHandler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResponse (s, m, f));
+      ::wadlxsd::serializeResponse (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -9902,13 +9902,13 @@ namespace wadl
 
   void
   serializeResponse (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResponse (s, m, f));
+      ::wadlxsd::serializeResponse (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -9920,14 +9920,14 @@ namespace wadl
 
   void
   serializeResponse (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      ::xml_schema::error_handler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResponse (s, m, f));
+      ::wadlxsd::serializeResponse (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9936,14 +9936,14 @@ namespace wadl
 
   void
   serializeResponse (::xercesc::XMLFormatTarget& t,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      ::xercesc::DOMErrorHandler& h,
                      const ::xml_schema::namespace_infomap& m,
                      const ::std::string& e,
                      ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeResponse (s, m, f));
+      ::wadlxsd::serializeResponse (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -9952,7 +9952,7 @@ namespace wadl
 
   void
   serializeResponse (::xercesc::DOMDocument& d,
-                     const ::wadl::response& s,
+                     const ::wadlxsd::response& s,
                      ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -9975,7 +9975,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResponse (const ::wadl::response& s,
+  serializeResponse (const ::wadlxsd::response& s,
                      const ::xml_schema::namespace_infomap& m,
                      ::xml_schema::flags f)
   {
@@ -9985,7 +9985,7 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeResponse (*d, s, f);
+    ::wadlxsd::serializeResponse (*d, s, f);
     return d;
   }
 
@@ -10010,7 +10010,7 @@ namespace wadl
 
   void
   serializeRepresentation (::std::ostream& o,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            const ::xml_schema::namespace_infomap& m,
                            const ::std::string& e,
                            ::xml_schema::flags f)
@@ -10019,7 +10019,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRepresentation (s, m, f));
+      ::wadlxsd::serializeRepresentation (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10032,7 +10032,7 @@ namespace wadl
 
   void
   serializeRepresentation (::std::ostream& o,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            ::xml_schema::error_handler& h,
                            const ::xml_schema::namespace_infomap& m,
                            const ::std::string& e,
@@ -10042,7 +10042,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRepresentation (s, m, f));
+      ::wadlxsd::serializeRepresentation (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10052,14 +10052,14 @@ namespace wadl
 
   void
   serializeRepresentation (::std::ostream& o,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            ::xercesc::DOMErrorHandler& h,
                            const ::xml_schema::namespace_infomap& m,
                            const ::std::string& e,
                            ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRepresentation (s, m, f));
+      ::wadlxsd::serializeRepresentation (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10069,13 +10069,13 @@ namespace wadl
 
   void
   serializeRepresentation (::xercesc::XMLFormatTarget& t,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            const ::xml_schema::namespace_infomap& m,
                            const ::std::string& e,
                            ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRepresentation (s, m, f));
+      ::wadlxsd::serializeRepresentation (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10087,14 +10087,14 @@ namespace wadl
 
   void
   serializeRepresentation (::xercesc::XMLFormatTarget& t,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            ::xml_schema::error_handler& h,
                            const ::xml_schema::namespace_infomap& m,
                            const ::std::string& e,
                            ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRepresentation (s, m, f));
+      ::wadlxsd::serializeRepresentation (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10103,14 +10103,14 @@ namespace wadl
 
   void
   serializeRepresentation (::xercesc::XMLFormatTarget& t,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            ::xercesc::DOMErrorHandler& h,
                            const ::xml_schema::namespace_infomap& m,
                            const ::std::string& e,
                            ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeRepresentation (s, m, f));
+      ::wadlxsd::serializeRepresentation (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10119,7 +10119,7 @@ namespace wadl
 
   void
   serializeRepresentation (::xercesc::DOMDocument& d,
-                           const ::wadl::representation& s,
+                           const ::wadlxsd::representation& s,
                            ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -10142,7 +10142,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeRepresentation (const ::wadl::representation& s,
+  serializeRepresentation (const ::wadlxsd::representation& s,
                            const ::xml_schema::namespace_infomap& m,
                            ::xml_schema::flags f)
   {
@@ -10152,7 +10152,7 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeRepresentation (*d, s, f);
+    ::wadlxsd::serializeRepresentation (*d, s, f);
     return d;
   }
 
@@ -10196,7 +10196,7 @@ namespace wadl
 
   void
   serializeParam (::std::ostream& o,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   const ::xml_schema::namespace_infomap& m,
                   const ::std::string& e,
                   ::xml_schema::flags f)
@@ -10205,7 +10205,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeParam (s, m, f));
+      ::wadlxsd::serializeParam (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10218,7 +10218,7 @@ namespace wadl
 
   void
   serializeParam (::std::ostream& o,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   ::xml_schema::error_handler& h,
                   const ::xml_schema::namespace_infomap& m,
                   const ::std::string& e,
@@ -10228,7 +10228,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeParam (s, m, f));
+      ::wadlxsd::serializeParam (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10238,14 +10238,14 @@ namespace wadl
 
   void
   serializeParam (::std::ostream& o,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   ::xercesc::DOMErrorHandler& h,
                   const ::xml_schema::namespace_infomap& m,
                   const ::std::string& e,
                   ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeParam (s, m, f));
+      ::wadlxsd::serializeParam (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10255,13 +10255,13 @@ namespace wadl
 
   void
   serializeParam (::xercesc::XMLFormatTarget& t,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   const ::xml_schema::namespace_infomap& m,
                   const ::std::string& e,
                   ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeParam (s, m, f));
+      ::wadlxsd::serializeParam (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10273,14 +10273,14 @@ namespace wadl
 
   void
   serializeParam (::xercesc::XMLFormatTarget& t,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   ::xml_schema::error_handler& h,
                   const ::xml_schema::namespace_infomap& m,
                   const ::std::string& e,
                   ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeParam (s, m, f));
+      ::wadlxsd::serializeParam (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10289,14 +10289,14 @@ namespace wadl
 
   void
   serializeParam (::xercesc::XMLFormatTarget& t,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   ::xercesc::DOMErrorHandler& h,
                   const ::xml_schema::namespace_infomap& m,
                   const ::std::string& e,
                   ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeParam (s, m, f));
+      ::wadlxsd::serializeParam (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10305,7 +10305,7 @@ namespace wadl
 
   void
   serializeParam (::xercesc::DOMDocument& d,
-                  const ::wadl::param& s,
+                  const ::wadlxsd::param& s,
                   ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -10328,7 +10328,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeParam (const ::wadl::param& s,
+  serializeParam (const ::wadlxsd::param& s,
                   const ::xml_schema::namespace_infomap& m,
                   ::xml_schema::flags f)
   {
@@ -10338,13 +10338,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeParam (*d, s, f);
+    ::wadlxsd::serializeParam (*d, s, f);
     return d;
   }
 
   void
   serializeOption (::std::ostream& o,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
@@ -10353,7 +10353,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeOption (s, m, f));
+      ::wadlxsd::serializeOption (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10366,7 +10366,7 @@ namespace wadl
 
   void
   serializeOption (::std::ostream& o,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    ::xml_schema::error_handler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
@@ -10376,7 +10376,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeOption (s, m, f));
+      ::wadlxsd::serializeOption (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10386,14 +10386,14 @@ namespace wadl
 
   void
   serializeOption (::std::ostream& o,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    ::xercesc::DOMErrorHandler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeOption (s, m, f));
+      ::wadlxsd::serializeOption (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10403,13 +10403,13 @@ namespace wadl
 
   void
   serializeOption (::xercesc::XMLFormatTarget& t,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeOption (s, m, f));
+      ::wadlxsd::serializeOption (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10421,14 +10421,14 @@ namespace wadl
 
   void
   serializeOption (::xercesc::XMLFormatTarget& t,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    ::xml_schema::error_handler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeOption (s, m, f));
+      ::wadlxsd::serializeOption (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10437,14 +10437,14 @@ namespace wadl
 
   void
   serializeOption (::xercesc::XMLFormatTarget& t,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    ::xercesc::DOMErrorHandler& h,
                    const ::xml_schema::namespace_infomap& m,
                    const ::std::string& e,
                    ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeOption (s, m, f));
+      ::wadlxsd::serializeOption (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10453,7 +10453,7 @@ namespace wadl
 
   void
   serializeOption (::xercesc::DOMDocument& d,
-                   const ::wadl::option& s,
+                   const ::wadlxsd::option& s,
                    ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -10476,7 +10476,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeOption (const ::wadl::option& s,
+  serializeOption (const ::wadlxsd::option& s,
                    const ::xml_schema::namespace_infomap& m,
                    ::xml_schema::flags f)
   {
@@ -10486,13 +10486,13 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeOption (*d, s, f);
+    ::wadlxsd::serializeOption (*d, s, f);
     return d;
   }
 
   void
   serializeLink (::std::ostream& o,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  const ::xml_schema::namespace_infomap& m,
                  const ::std::string& e,
                  ::xml_schema::flags f)
@@ -10501,7 +10501,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeLink (s, m, f));
+      ::wadlxsd::serializeLink (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10514,7 +10514,7 @@ namespace wadl
 
   void
   serializeLink (::std::ostream& o,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  ::xml_schema::error_handler& h,
                  const ::xml_schema::namespace_infomap& m,
                  const ::std::string& e,
@@ -10524,7 +10524,7 @@ namespace wadl
       (f & ::xml_schema::flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeLink (s, m, f));
+      ::wadlxsd::serializeLink (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10534,14 +10534,14 @@ namespace wadl
 
   void
   serializeLink (::std::ostream& o,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  ::xercesc::DOMErrorHandler& h,
                  const ::xml_schema::namespace_infomap& m,
                  const ::std::string& e,
                  ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeLink (s, m, f));
+      ::wadlxsd::serializeLink (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -10551,13 +10551,13 @@ namespace wadl
 
   void
   serializeLink (::xercesc::XMLFormatTarget& t,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  const ::xml_schema::namespace_infomap& m,
                  const ::std::string& e,
                  ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeLink (s, m, f));
+      ::wadlxsd::serializeLink (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -10569,14 +10569,14 @@ namespace wadl
 
   void
   serializeLink (::xercesc::XMLFormatTarget& t,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  ::xml_schema::error_handler& h,
                  const ::xml_schema::namespace_infomap& m,
                  const ::std::string& e,
                  ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeLink (s, m, f));
+      ::wadlxsd::serializeLink (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10585,14 +10585,14 @@ namespace wadl
 
   void
   serializeLink (::xercesc::XMLFormatTarget& t,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  ::xercesc::DOMErrorHandler& h,
                  const ::xml_schema::namespace_infomap& m,
                  const ::std::string& e,
                  ::xml_schema::flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::wadl::serializeLink (s, m, f));
+      ::wadlxsd::serializeLink (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -10601,7 +10601,7 @@ namespace wadl
 
   void
   serializeLink (::xercesc::DOMDocument& d,
-                 const ::wadl::link& s,
+                 const ::wadlxsd::link& s,
                  ::xml_schema::flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
@@ -10624,7 +10624,7 @@ namespace wadl
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeLink (const ::wadl::link& s,
+  serializeLink (const ::wadlxsd::link& s,
                  const ::xml_schema::namespace_infomap& m,
                  ::xml_schema::flags f)
   {
@@ -10634,7 +10634,7 @@ namespace wadl
         "http://wadl.dev.java.net/2009/02",
         m, f));
 
-    ::wadl::serializeLink (*d, s, f);
+    ::wadlxsd::serializeLink (*d, s, f);
     return d;
   }
 

@@ -7,53 +7,76 @@
 
 #include <memory>
 #include <iostream>
+#include "resource.h"
 
 using namespace std;
 
-ModelParser::ModelParser()
-{
-}
+namespace wadl {
 
-void ModelParser::parseXml(){
-    try {
+    ModelParser::ModelParser()
+    {
+    }
 
-        unique_ptr<wadl::application> wadlParse(wadl::parseApplication("D:/projects-cpp/wadltool/application.wadl", xml_schema::flags::dont_validate)); // xml_schema::flags::dont_validate
-        shared_ptr<wadl::application> app(std::move(wadlParse)); //convert to shared ptr for code completion to work
+    void ModelParser::parseXml(){
+        try {
 
-        //foreach (auto resourcesItr, app->getResources()) { // also works!
-       for (auto resourcesItr = app->getResources().begin(); resourcesItr != app->getResources().end(); ++resourcesItr){
-            cout << resourcesItr->getBase() << endl;
-            for (auto resourceItr = resourcesItr->getResource().begin(); resourceItr != resourcesItr->getResource().end(); ++resourceItr) {
-                string path = resourcesItr->getBase().get();
-                path.pop_back();
-                printResource(path, *resourceItr);
+            unique_ptr<wadlxsd::application> wadlParse(wadlxsd::parseApplication("D:/projects-cpp/wadltool/resources/application.wadl", xml_schema::flags::dont_validate)); // xml_schema::flags::dont_validate
+            shared_ptr<wadlxsd::application> app(std::move(wadlParse)); //convert to shared ptr for code completion to work
+
+            //foreach (auto resourcesItr, app->getResources()) { // also works!
+           for (auto resourcesItr = app->getResources().begin(); resourcesItr != app->getResources().end(); ++resourcesItr){
+                cout << resourcesItr->getBase() << endl;
+                for (auto resourceItr = resourcesItr->getResource().begin(); resourceItr != resourcesItr->getResource().end(); ++resourceItr) {
+                    string path = resourcesItr->getBase().get();
+                    path.pop_back();
+                    printResource(path, *resourceItr);
+                }
             }
+        } catch (const xml_schema::exception& e) {
+            cerr << e << endl;
         }
-    } catch (const xml_schema::exception& e) {
-        cerr << e << endl;
+
     }
 
-}
+    void ModelParser::printResource(string prefix, wadlxsd::resource resource) {
+        string path = "";
+        if(resource.getPath()) {
+            path = resource.getPath().get();
+        }
 
-void ModelParser::printResource(string prefix, wadl::resource resource) {
-    string path = "";
-    if(resource.getPath()) {
-        path = resource.getPath().get();
+        cout << prefix << path << extractMethods(resource) << endl;
+
+        for (wadlxsd::resources::resource_const_iterator resourceItr = resource.getResource1().begin(); resourceItr != resource.getResource1().end(); ++resourceItr) {
+            printResource(prefix + path, *resourceItr);
+        }
     }
 
-    cout << prefix << path << extractMethods(resource) << endl;
+    string ModelParser::extractMethods(wadlxsd::resource resource) {
+        auto methods = resource.getMethod();
 
-    for (wadl::resources::resource_const_iterator resourceItr = resource.getResource1().begin(); resourceItr != resource.getResource1().end(); ++resourceItr) {
-        printResource(prefix + path, *resourceItr);
+        string methodSum = "   ";
+        for(wadlxsd::resource::method_const_iterator method = methods.begin(); method != methods.end(); ++method) {
+            methodSum += method->getName().get() + " " + method->getId().get() + "()   ";
+        }
+        return methodSum;
     }
-}
 
-string ModelParser::extractMethods(wadl::resource resource) {
-    auto methods = resource.getMethod();
 
-    string methodSum = "   ";
-    for(wadl::resource::method_const_iterator method = methods.begin(); method != methods.end(); ++method) {
-        methodSum += method->getName().get() + " " + method->getId().get() + "()   ";
+    RestApp ModelParser::parseWadl(const string &location) {
+        RestApp app;
+
+        Resource resource("test");
+        Method method(HttpMethod::GET);
+        QueryParam queryParam("start", "string");
+        method.getQueryParams().push_back(queryParam);
+        resource.getMethods().push_back(method);
+        app.getResources().push_back(resource);
+
+        return app;
     }
-    return methodSum;
+
+    void ModelParser::addResource(RestApp &app, Resource &parent){
+
+    }
+
 }

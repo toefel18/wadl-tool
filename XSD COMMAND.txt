@@ -1,7 +1,0 @@
-wadl.xml handmatig aangepast van:
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-naar
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
-  
-xsd.exe cxx-tree --generate-serialization --generate-doxygen --generate-ostream --std c++11 --function-naming java --namespace-map http://wadl.dev.java.net/2009/02=wadl wadl.xsd
-xsd.exe cxx-tree --generate-serialization --generate-doxygen --generate-ostream --std c++11 --function-naming java xml.xsd

@@ -12,8 +12,10 @@ ReadableWadlWindow::ReadableWadlWindow(QWidget *parent) :
     ui(new Ui::ReadableWadlWindow) {
     ui->setupUi(this);
 
-    ModelParser parser;
-    parser.parseXml();
+    wadl::ModelParser parser;
+//    parser.parseXml();
+    wadl::RestApp app = parser.parseWadl("dummy");
+    app.getResources();
 }
 
 ReadableWadlWindow::~ReadableWadlWindow()

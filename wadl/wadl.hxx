@@ -618,7 +618,7 @@ namespace xml_schema
 
 // Forward declarations.
 //
-namespace wadl
+namespace wadlxsd
 {
   class resource_type_list;
   class Method;
@@ -663,7 +663,7 @@ namespace wadl
  * @brief C++ namespace for the %http://wadl.dev.java.net/2009/02
  * schema namespace.
  */
-namespace wadl
+namespace wadlxsd
 {
   /**
    * @brief List class corresponding to the %resource_type_list
@@ -1419,7 +1419,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -1483,7 +1483,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::grammars grammars_type;
+    typedef ::wadlxsd::grammars grammars_type;
 
     /**
      * @brief Element optional container type.
@@ -1559,7 +1559,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::resources resources_type;
+    typedef ::wadlxsd::resources resources_type;
 
     /**
      * @brief Element sequence container type.
@@ -1623,7 +1623,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::resource_type resource_type_type;
+    typedef ::wadlxsd::resource_type resource_type_type;
 
     /**
      * @brief Element sequence container type.
@@ -1687,7 +1687,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::method method_type;
+    typedef ::wadlxsd::method method_type;
 
     /**
      * @brief Element sequence container type.
@@ -1751,7 +1751,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::representation representation_type;
+    typedef ::wadlxsd::representation representation_type;
 
     /**
      * @brief Element sequence container type.
@@ -1815,7 +1815,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::param param_type;
+    typedef ::wadlxsd::param param_type;
 
     /**
      * @brief Element sequence container type.
@@ -2229,7 +2229,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -2293,7 +2293,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::include include_type;
+    typedef ::wadlxsd::include include_type;
 
     /**
      * @brief Element sequence container type.
@@ -2452,7 +2452,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -2516,7 +2516,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::resource resource_type;
+    typedef ::wadlxsd::resource resource_type;
 
     /**
      * @brief Element sequence container type.
@@ -2752,7 +2752,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -2816,7 +2816,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::param param_type;
+    typedef ::wadlxsd::param param_type;
 
     /**
      * @brief Element sequence container type.
@@ -2880,7 +2880,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::method method_type;
+    typedef ::wadlxsd::method method_type;
 
     /**
      * @brief Element sequence container type.
@@ -2944,7 +2944,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::resource resource1_type;
+    typedef ::wadlxsd::resource resource1_type;
 
     /**
      * @brief Element sequence container type.
@@ -3084,7 +3084,7 @@ namespace wadl
     /**
      * @brief Attribute type.
      */
-    typedef ::wadl::resource_type_list type_type;
+    typedef ::wadlxsd::resource_type_list type_type;
 
     /**
      * @brief Attribute optional container type.
@@ -3405,7 +3405,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -3469,7 +3469,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::param param_type;
+    typedef ::wadlxsd::param param_type;
 
     /**
      * @brief Element sequence container type.
@@ -3533,7 +3533,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::method method_type;
+    typedef ::wadlxsd::method method_type;
 
     /**
      * @brief Element sequence container type.
@@ -3597,7 +3597,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::resource resource_type1;
+    typedef ::wadlxsd::resource resource_type1;
 
     /**
      * @brief Element sequence container type.
@@ -3835,7 +3835,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -3899,7 +3899,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::request request_type;
+    typedef ::wadlxsd::request request_type;
 
     /**
      * @brief Element optional container type.
@@ -3975,7 +3975,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::response response_type;
+    typedef ::wadlxsd::response response_type;
 
     /**
      * @brief Element sequence container type.
@@ -4115,7 +4115,7 @@ namespace wadl
     /**
      * @brief Attribute type.
      */
-    typedef ::wadl::Method name_type;
+    typedef ::wadlxsd::Method name_type;
 
     /**
      * @brief Attribute optional container type.
@@ -4366,7 +4366,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -4601,7 +4601,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -4665,7 +4665,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::param param_type;
+    typedef ::wadlxsd::param param_type;
 
     /**
      * @brief Element sequence container type.
@@ -4729,7 +4729,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::representation representation_type;
+    typedef ::wadlxsd::representation representation_type;
 
     /**
      * @brief Element sequence container type.
@@ -4889,7 +4889,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -4953,7 +4953,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::param param_type;
+    typedef ::wadlxsd::param param_type;
 
     /**
      * @brief Element sequence container type.
@@ -5017,7 +5017,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::representation representation_type;
+    typedef ::wadlxsd::representation representation_type;
 
     /**
      * @brief Element sequence container type.
@@ -5081,7 +5081,7 @@ namespace wadl
     /**
      * @brief Attribute type.
      */
-    typedef ::wadl::statusCodeList status_type;
+    typedef ::wadlxsd::statusCodeList status_type;
 
     /**
      * @brief Attribute optional container type.
@@ -5254,7 +5254,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -5318,7 +5318,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::param param_type;
+    typedef ::wadlxsd::param param_type;
 
     /**
      * @brief Element sequence container type.
@@ -5686,7 +5686,7 @@ namespace wadl
     /**
      * @brief Attribute type.
      */
-    typedef ::wadl::uriList profile_type;
+    typedef ::wadlxsd::uriList profile_type;
 
     /**
      * @brief Attribute optional container type.
@@ -5862,7 +5862,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -5926,7 +5926,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::option option_type;
+    typedef ::wadlxsd::option option_type;
 
     /**
      * @brief Element sequence container type.
@@ -5990,7 +5990,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::link link_type;
+    typedef ::wadlxsd::link link_type;
 
     /**
      * @brief Element optional container type.
@@ -6218,7 +6218,7 @@ namespace wadl
     /**
      * @brief Attribute type.
      */
-    typedef ::wadl::ParamStyle style_type;
+    typedef ::wadlxsd::ParamStyle style_type;
 
     /**
      * @brief Attribute optional container type.
@@ -6882,7 +6882,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -7176,7 +7176,7 @@ namespace wadl
     /**
      * @brief Element type.
      */
-    typedef ::wadl::doc doc_type;
+    typedef ::wadlxsd::doc doc_type;
 
     /**
      * @brief Element sequence container type.
@@ -7549,7 +7549,7 @@ namespace wadl
 
 #include <iosfwd>
 
-namespace wadl
+namespace wadlxsd
 {
   ::std::ostream&
   operator<< (::std::ostream&, const resource_type_list&);
@@ -7624,7 +7624,7 @@ namespace wadl
 #include <xercesc/dom/DOMDocument.hpp>
 #include <xercesc/dom/DOMErrorHandler.hpp>
 
-namespace wadl
+namespace wadlxsd
 {
   /**
    * @name Parsing functions for the %application document root.
@@ -7641,7 +7641,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::std::string& uri,
                     ::xml_schema::flags f = 0,
                     const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7657,7 +7657,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::std::string& uri,
                     ::xml_schema::error_handler& eh,
                     ::xml_schema::flags f = 0,
@@ -7675,7 +7675,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::std::string& uri,
                     ::xercesc::DOMErrorHandler& eh,
                     ::xml_schema::flags f = 0,
@@ -7691,7 +7691,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     ::xml_schema::flags f = 0,
                     const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7707,7 +7707,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     ::xml_schema::error_handler& eh,
                     ::xml_schema::flags f = 0,
@@ -7725,7 +7725,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     ::xercesc::DOMErrorHandler& eh,
                     ::xml_schema::flags f = 0,
@@ -7745,7 +7745,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     const ::std::string& id,
                     ::xml_schema::flags f = 0,
@@ -7767,7 +7767,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     const ::std::string& id,
                     ::xml_schema::error_handler& eh,
@@ -7790,7 +7790,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::std::istream& is,
                     const ::std::string& id,
                     ::xercesc::DOMErrorHandler& eh,
@@ -7807,7 +7807,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xercesc::InputSource& is,
                     ::xml_schema::flags f = 0,
                     const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7823,7 +7823,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xercesc::InputSource& is,
                     ::xml_schema::error_handler& eh,
                     ::xml_schema::flags f = 0,
@@ -7841,7 +7841,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xercesc::InputSource& is,
                     ::xercesc::DOMErrorHandler& eh,
                     ::xml_schema::flags f = 0,
@@ -7855,7 +7855,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (const ::xercesc::DOMDocument& d,
                     ::xml_schema::flags f = 0,
                     const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7872,7 +7872,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::application >
+  ::std::unique_ptr< ::wadlxsd::application >
   parseApplication (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                     ::xml_schema::flags f = 0,
                     const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7894,7 +7894,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::std::string& uri,
             ::xml_schema::flags f = 0,
             const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7910,7 +7910,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::std::string& uri,
             ::xml_schema::error_handler& eh,
             ::xml_schema::flags f = 0,
@@ -7928,7 +7928,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::std::string& uri,
             ::xercesc::DOMErrorHandler& eh,
             ::xml_schema::flags f = 0,
@@ -7944,7 +7944,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             ::xml_schema::flags f = 0,
             const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -7960,7 +7960,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             ::xml_schema::error_handler& eh,
             ::xml_schema::flags f = 0,
@@ -7978,7 +7978,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             ::xercesc::DOMErrorHandler& eh,
             ::xml_schema::flags f = 0,
@@ -7998,7 +7998,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             const ::std::string& id,
             ::xml_schema::flags f = 0,
@@ -8020,7 +8020,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             const ::std::string& id,
             ::xml_schema::error_handler& eh,
@@ -8043,7 +8043,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::std::istream& is,
             const ::std::string& id,
             ::xercesc::DOMErrorHandler& eh,
@@ -8060,7 +8060,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xercesc::InputSource& is,
             ::xml_schema::flags f = 0,
             const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8076,7 +8076,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xercesc::InputSource& is,
             ::xml_schema::error_handler& eh,
             ::xml_schema::flags f = 0,
@@ -8094,7 +8094,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xercesc::InputSource& is,
             ::xercesc::DOMErrorHandler& eh,
             ::xml_schema::flags f = 0,
@@ -8108,7 +8108,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (const ::xercesc::DOMDocument& d,
             ::xml_schema::flags f = 0,
             const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8125,7 +8125,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::doc >
+  ::std::unique_ptr< ::wadlxsd::doc >
   parseDoc (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
             ::xml_schema::flags f = 0,
             const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8147,7 +8147,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::std::string& uri,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8163,7 +8163,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::std::string& uri,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -8181,7 +8181,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::std::string& uri,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -8197,7 +8197,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8213,7 +8213,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -8231,7 +8231,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -8251,7 +8251,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  const ::std::string& id,
                  ::xml_schema::flags f = 0,
@@ -8273,7 +8273,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  const ::std::string& id,
                  ::xml_schema::error_handler& eh,
@@ -8296,7 +8296,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::std::istream& is,
                  const ::std::string& id,
                  ::xercesc::DOMErrorHandler& eh,
@@ -8313,7 +8313,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xercesc::InputSource& is,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8329,7 +8329,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xercesc::InputSource& is,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -8347,7 +8347,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xercesc::InputSource& is,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -8361,7 +8361,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (const ::xercesc::DOMDocument& d,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8378,7 +8378,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::grammars >
+  ::std::unique_ptr< ::wadlxsd::grammars >
   parseGrammars (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8400,7 +8400,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::std::string& uri,
                   ::xml_schema::flags f = 0,
                   const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8416,7 +8416,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::std::string& uri,
                   ::xml_schema::error_handler& eh,
                   ::xml_schema::flags f = 0,
@@ -8434,7 +8434,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::std::string& uri,
                   ::xercesc::DOMErrorHandler& eh,
                   ::xml_schema::flags f = 0,
@@ -8450,7 +8450,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   ::xml_schema::flags f = 0,
                   const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8466,7 +8466,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   ::xml_schema::error_handler& eh,
                   ::xml_schema::flags f = 0,
@@ -8484,7 +8484,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   ::xercesc::DOMErrorHandler& eh,
                   ::xml_schema::flags f = 0,
@@ -8504,7 +8504,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   const ::std::string& id,
                   ::xml_schema::flags f = 0,
@@ -8526,7 +8526,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   const ::std::string& id,
                   ::xml_schema::error_handler& eh,
@@ -8549,7 +8549,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::std::istream& is,
                   const ::std::string& id,
                   ::xercesc::DOMErrorHandler& eh,
@@ -8566,7 +8566,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xercesc::InputSource& is,
                   ::xml_schema::flags f = 0,
                   const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8582,7 +8582,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xercesc::InputSource& is,
                   ::xml_schema::error_handler& eh,
                   ::xml_schema::flags f = 0,
@@ -8600,7 +8600,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xercesc::InputSource& is,
                   ::xercesc::DOMErrorHandler& eh,
                   ::xml_schema::flags f = 0,
@@ -8614,7 +8614,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (const ::xercesc::DOMDocument& d,
                   ::xml_schema::flags f = 0,
                   const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8631,7 +8631,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::resources >
+  ::std::unique_ptr< ::wadlxsd::resources >
   parseResources (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                   ::xml_schema::flags f = 0,
                   const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8653,7 +8653,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::std::string& uri,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8669,7 +8669,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::std::string& uri,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -8687,7 +8687,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::std::string& uri,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -8703,7 +8703,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8719,7 +8719,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -8737,7 +8737,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -8757,7 +8757,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  const ::std::string& id,
                  ::xml_schema::flags f = 0,
@@ -8779,7 +8779,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  const ::std::string& id,
                  ::xml_schema::error_handler& eh,
@@ -8802,7 +8802,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::std::istream& is,
                  const ::std::string& id,
                  ::xercesc::DOMErrorHandler& eh,
@@ -8819,7 +8819,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xercesc::InputSource& is,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8835,7 +8835,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xercesc::InputSource& is,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -8853,7 +8853,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xercesc::InputSource& is,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -8867,7 +8867,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (const ::xercesc::DOMDocument& d,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8884,7 +8884,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::resource >
+  ::std::unique_ptr< ::wadlxsd::resource >
   parseResource (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8906,7 +8906,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::std::string& uri,
                       ::xml_schema::flags f = 0,
                       const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8922,7 +8922,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::std::string& uri,
                       ::xml_schema::error_handler& eh,
                       ::xml_schema::flags f = 0,
@@ -8940,7 +8940,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::std::string& uri,
                       ::xercesc::DOMErrorHandler& eh,
                       ::xml_schema::flags f = 0,
@@ -8956,7 +8956,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       ::xml_schema::flags f = 0,
                       const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -8972,7 +8972,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       ::xml_schema::error_handler& eh,
                       ::xml_schema::flags f = 0,
@@ -8990,7 +8990,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       ::xercesc::DOMErrorHandler& eh,
                       ::xml_schema::flags f = 0,
@@ -9010,7 +9010,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       const ::std::string& id,
                       ::xml_schema::flags f = 0,
@@ -9032,7 +9032,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       const ::std::string& id,
                       ::xml_schema::error_handler& eh,
@@ -9055,7 +9055,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::std::istream& is,
                       const ::std::string& id,
                       ::xercesc::DOMErrorHandler& eh,
@@ -9072,7 +9072,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xercesc::InputSource& is,
                       ::xml_schema::flags f = 0,
                       const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9088,7 +9088,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xercesc::InputSource& is,
                       ::xml_schema::error_handler& eh,
                       ::xml_schema::flags f = 0,
@@ -9106,7 +9106,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xercesc::InputSource& is,
                       ::xercesc::DOMErrorHandler& eh,
                       ::xml_schema::flags f = 0,
@@ -9120,7 +9120,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (const ::xercesc::DOMDocument& d,
                       ::xml_schema::flags f = 0,
                       const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9137,7 +9137,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::resource_type >
+  ::std::unique_ptr< ::wadlxsd::resource_type >
   parseResource_type (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                       ::xml_schema::flags f = 0,
                       const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9159,7 +9159,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::std::string& uri,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9175,7 +9175,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::std::string& uri,
                ::xml_schema::error_handler& eh,
                ::xml_schema::flags f = 0,
@@ -9193,7 +9193,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::std::string& uri,
                ::xercesc::DOMErrorHandler& eh,
                ::xml_schema::flags f = 0,
@@ -9209,7 +9209,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9225,7 +9225,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                ::xml_schema::error_handler& eh,
                ::xml_schema::flags f = 0,
@@ -9243,7 +9243,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                ::xercesc::DOMErrorHandler& eh,
                ::xml_schema::flags f = 0,
@@ -9263,7 +9263,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                const ::std::string& id,
                ::xml_schema::flags f = 0,
@@ -9285,7 +9285,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                const ::std::string& id,
                ::xml_schema::error_handler& eh,
@@ -9308,7 +9308,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::std::istream& is,
                const ::std::string& id,
                ::xercesc::DOMErrorHandler& eh,
@@ -9325,7 +9325,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xercesc::InputSource& is,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9341,7 +9341,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xercesc::InputSource& is,
                ::xml_schema::error_handler& eh,
                ::xml_schema::flags f = 0,
@@ -9359,7 +9359,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xercesc::InputSource& is,
                ::xercesc::DOMErrorHandler& eh,
                ::xml_schema::flags f = 0,
@@ -9373,7 +9373,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (const ::xercesc::DOMDocument& d,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9390,7 +9390,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::method >
+  ::std::unique_ptr< ::wadlxsd::method >
   parseMethod (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9412,7 +9412,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::std::string& uri,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9428,7 +9428,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::std::string& uri,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
@@ -9446,7 +9446,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::std::string& uri,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -9462,7 +9462,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9478,7 +9478,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
@@ -9496,7 +9496,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -9516,7 +9516,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 const ::std::string& id,
                 ::xml_schema::flags f = 0,
@@ -9538,7 +9538,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 const ::std::string& id,
                 ::xml_schema::error_handler& eh,
@@ -9561,7 +9561,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::std::istream& is,
                 const ::std::string& id,
                 ::xercesc::DOMErrorHandler& eh,
@@ -9578,7 +9578,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xercesc::InputSource& is,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9594,7 +9594,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xercesc::InputSource& is,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
@@ -9612,7 +9612,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xercesc::InputSource& is,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -9626,7 +9626,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (const ::xercesc::DOMDocument& d,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9643,7 +9643,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::include >
+  ::std::unique_ptr< ::wadlxsd::include >
   parseInclude (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9665,7 +9665,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::std::string& uri,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9681,7 +9681,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::std::string& uri,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
@@ -9699,7 +9699,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::std::string& uri,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -9715,7 +9715,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9731,7 +9731,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
@@ -9749,7 +9749,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -9769,7 +9769,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 const ::std::string& id,
                 ::xml_schema::flags f = 0,
@@ -9791,7 +9791,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 const ::std::string& id,
                 ::xml_schema::error_handler& eh,
@@ -9814,7 +9814,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::std::istream& is,
                 const ::std::string& id,
                 ::xercesc::DOMErrorHandler& eh,
@@ -9831,7 +9831,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xercesc::InputSource& is,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9847,7 +9847,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xercesc::InputSource& is,
                 ::xml_schema::error_handler& eh,
                 ::xml_schema::flags f = 0,
@@ -9865,7 +9865,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xercesc::InputSource& is,
                 ::xercesc::DOMErrorHandler& eh,
                 ::xml_schema::flags f = 0,
@@ -9879,7 +9879,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (const ::xercesc::DOMDocument& d,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9896,7 +9896,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::request >
+  ::std::unique_ptr< ::wadlxsd::request >
   parseRequest (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                 ::xml_schema::flags f = 0,
                 const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9918,7 +9918,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::std::string& uri,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9934,7 +9934,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::std::string& uri,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -9952,7 +9952,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::std::string& uri,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -9968,7 +9968,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -9984,7 +9984,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -10002,7 +10002,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -10022,7 +10022,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  const ::std::string& id,
                  ::xml_schema::flags f = 0,
@@ -10044,7 +10044,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  const ::std::string& id,
                  ::xml_schema::error_handler& eh,
@@ -10067,7 +10067,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::std::istream& is,
                  const ::std::string& id,
                  ::xercesc::DOMErrorHandler& eh,
@@ -10084,7 +10084,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xercesc::InputSource& is,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10100,7 +10100,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xercesc::InputSource& is,
                  ::xml_schema::error_handler& eh,
                  ::xml_schema::flags f = 0,
@@ -10118,7 +10118,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xercesc::InputSource& is,
                  ::xercesc::DOMErrorHandler& eh,
                  ::xml_schema::flags f = 0,
@@ -10132,7 +10132,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (const ::xercesc::DOMDocument& d,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10149,7 +10149,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::response >
+  ::std::unique_ptr< ::wadlxsd::response >
   parseResponse (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                  ::xml_schema::flags f = 0,
                  const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10171,7 +10171,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::std::string& uri,
                        ::xml_schema::flags f = 0,
                        const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10187,7 +10187,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::std::string& uri,
                        ::xml_schema::error_handler& eh,
                        ::xml_schema::flags f = 0,
@@ -10205,7 +10205,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::std::string& uri,
                        ::xercesc::DOMErrorHandler& eh,
                        ::xml_schema::flags f = 0,
@@ -10221,7 +10221,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        ::xml_schema::flags f = 0,
                        const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10237,7 +10237,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        ::xml_schema::error_handler& eh,
                        ::xml_schema::flags f = 0,
@@ -10255,7 +10255,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        ::xercesc::DOMErrorHandler& eh,
                        ::xml_schema::flags f = 0,
@@ -10275,7 +10275,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        const ::std::string& id,
                        ::xml_schema::flags f = 0,
@@ -10297,7 +10297,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        const ::std::string& id,
                        ::xml_schema::error_handler& eh,
@@ -10320,7 +10320,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::std::istream& is,
                        const ::std::string& id,
                        ::xercesc::DOMErrorHandler& eh,
@@ -10337,7 +10337,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xercesc::InputSource& is,
                        ::xml_schema::flags f = 0,
                        const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10353,7 +10353,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xercesc::InputSource& is,
                        ::xml_schema::error_handler& eh,
                        ::xml_schema::flags f = 0,
@@ -10371,7 +10371,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xercesc::InputSource& is,
                        ::xercesc::DOMErrorHandler& eh,
                        ::xml_schema::flags f = 0,
@@ -10385,7 +10385,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (const ::xercesc::DOMDocument& d,
                        ::xml_schema::flags f = 0,
                        const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10402,7 +10402,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::representation >
+  ::std::unique_ptr< ::wadlxsd::representation >
   parseRepresentation (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                        ::xml_schema::flags f = 0,
                        const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10424,7 +10424,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::std::string& uri,
               ::xml_schema::flags f = 0,
               const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10440,7 +10440,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::std::string& uri,
               ::xml_schema::error_handler& eh,
               ::xml_schema::flags f = 0,
@@ -10458,7 +10458,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::std::string& uri,
               ::xercesc::DOMErrorHandler& eh,
               ::xml_schema::flags f = 0,
@@ -10474,7 +10474,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               ::xml_schema::flags f = 0,
               const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10490,7 +10490,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               ::xml_schema::error_handler& eh,
               ::xml_schema::flags f = 0,
@@ -10508,7 +10508,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               ::xercesc::DOMErrorHandler& eh,
               ::xml_schema::flags f = 0,
@@ -10528,7 +10528,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               const ::std::string& id,
               ::xml_schema::flags f = 0,
@@ -10550,7 +10550,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               const ::std::string& id,
               ::xml_schema::error_handler& eh,
@@ -10573,7 +10573,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::std::istream& is,
               const ::std::string& id,
               ::xercesc::DOMErrorHandler& eh,
@@ -10590,7 +10590,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xercesc::InputSource& is,
               ::xml_schema::flags f = 0,
               const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10606,7 +10606,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xercesc::InputSource& is,
               ::xml_schema::error_handler& eh,
               ::xml_schema::flags f = 0,
@@ -10624,7 +10624,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xercesc::InputSource& is,
               ::xercesc::DOMErrorHandler& eh,
               ::xml_schema::flags f = 0,
@@ -10638,7 +10638,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (const ::xercesc::DOMDocument& d,
               ::xml_schema::flags f = 0,
               const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10655,7 +10655,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::param >
+  ::std::unique_ptr< ::wadlxsd::param >
   parseParam (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
               ::xml_schema::flags f = 0,
               const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10677,7 +10677,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::std::string& uri,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10693,7 +10693,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::std::string& uri,
                ::xml_schema::error_handler& eh,
                ::xml_schema::flags f = 0,
@@ -10711,7 +10711,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::std::string& uri,
                ::xercesc::DOMErrorHandler& eh,
                ::xml_schema::flags f = 0,
@@ -10727,7 +10727,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10743,7 +10743,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                ::xml_schema::error_handler& eh,
                ::xml_schema::flags f = 0,
@@ -10761,7 +10761,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                ::xercesc::DOMErrorHandler& eh,
                ::xml_schema::flags f = 0,
@@ -10781,7 +10781,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                const ::std::string& id,
                ::xml_schema::flags f = 0,
@@ -10803,7 +10803,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                const ::std::string& id,
                ::xml_schema::error_handler& eh,
@@ -10826,7 +10826,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::std::istream& is,
                const ::std::string& id,
                ::xercesc::DOMErrorHandler& eh,
@@ -10843,7 +10843,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xercesc::InputSource& is,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10859,7 +10859,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xercesc::InputSource& is,
                ::xml_schema::error_handler& eh,
                ::xml_schema::flags f = 0,
@@ -10877,7 +10877,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xercesc::InputSource& is,
                ::xercesc::DOMErrorHandler& eh,
                ::xml_schema::flags f = 0,
@@ -10891,7 +10891,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (const ::xercesc::DOMDocument& d,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10908,7 +10908,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::option >
+  ::std::unique_ptr< ::wadlxsd::option >
   parseOption (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
                ::xml_schema::flags f = 0,
                const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10930,7 +10930,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::std::string& uri,
              ::xml_schema::flags f = 0,
              const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10946,7 +10946,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::std::string& uri,
              ::xml_schema::error_handler& eh,
              ::xml_schema::flags f = 0,
@@ -10964,7 +10964,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::std::string& uri,
              ::xercesc::DOMErrorHandler& eh,
              ::xml_schema::flags f = 0,
@@ -10980,7 +10980,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              ::xml_schema::flags f = 0,
              const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -10996,7 +10996,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              ::xml_schema::error_handler& eh,
              ::xml_schema::flags f = 0,
@@ -11014,7 +11014,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              ::xercesc::DOMErrorHandler& eh,
              ::xml_schema::flags f = 0,
@@ -11034,7 +11034,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              const ::std::string& id,
              ::xml_schema::flags f = 0,
@@ -11056,7 +11056,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              const ::std::string& id,
              ::xml_schema::error_handler& eh,
@@ -11079,7 +11079,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::std::istream& is,
              const ::std::string& id,
              ::xercesc::DOMErrorHandler& eh,
@@ -11096,7 +11096,7 @@ namespace wadl
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xercesc::InputSource& is,
              ::xml_schema::flags f = 0,
              const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -11112,7 +11112,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xercesc::InputSource& is,
              ::xml_schema::error_handler& eh,
              ::xml_schema::flags f = 0,
@@ -11130,7 +11130,7 @@ namespace wadl
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xercesc::InputSource& is,
              ::xercesc::DOMErrorHandler& eh,
              ::xml_schema::flags f = 0,
@@ -11144,7 +11144,7 @@ namespace wadl
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (const ::xercesc::DOMDocument& d,
              ::xml_schema::flags f = 0,
              const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -11161,7 +11161,7 @@ namespace wadl
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::wadl::link >
+  ::std::unique_ptr< ::wadlxsd::link >
   parseLink (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
              ::xml_schema::flags f = 0,
              const ::xml_schema::properties& p = ::xml_schema::properties ());
@@ -11177,7 +11177,7 @@ namespace wadl
 
 #include <xsd/cxx/xml/dom/auto-ptr.hxx>
 
-namespace wadl
+namespace wadlxsd
 {
   /**
    * @name Serialization functions for the %application document root.
@@ -11197,7 +11197,7 @@ namespace wadl
    */
   void
   serializeApplication (::std::ostream& os,
-                        const ::wadl::application& x, 
+                        const ::wadlxsd::application& x, 
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         const ::std::string& e = "UTF-8",
                         ::xml_schema::flags f = 0);
@@ -11217,7 +11217,7 @@ namespace wadl
    */
   void
   serializeApplication (::std::ostream& os,
-                        const ::wadl::application& x, 
+                        const ::wadlxsd::application& x, 
                         ::xml_schema::error_handler& eh,
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         const ::std::string& e = "UTF-8",
@@ -11239,7 +11239,7 @@ namespace wadl
    */
   void
   serializeApplication (::std::ostream& os,
-                        const ::wadl::application& x, 
+                        const ::wadlxsd::application& x, 
                         ::xercesc::DOMErrorHandler& eh,
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         const ::std::string& e = "UTF-8",
@@ -11258,7 +11258,7 @@ namespace wadl
    */
   void
   serializeApplication (::xercesc::XMLFormatTarget& ft,
-                        const ::wadl::application& x, 
+                        const ::wadlxsd::application& x, 
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         const ::std::string& e = "UTF-8",
                         ::xml_schema::flags f = 0);
@@ -11279,7 +11279,7 @@ namespace wadl
    */
   void
   serializeApplication (::xercesc::XMLFormatTarget& ft,
-                        const ::wadl::application& x, 
+                        const ::wadlxsd::application& x, 
                         ::xml_schema::error_handler& eh,
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         const ::std::string& e = "UTF-8",
@@ -11301,7 +11301,7 @@ namespace wadl
    */
   void
   serializeApplication (::xercesc::XMLFormatTarget& ft,
-                        const ::wadl::application& x, 
+                        const ::wadlxsd::application& x, 
                         ::xercesc::DOMErrorHandler& eh,
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         const ::std::string& e = "UTF-8",
@@ -11320,7 +11320,7 @@ namespace wadl
    */
   void
   serializeApplication (::xercesc::DOMDocument& d,
-                        const ::wadl::application& x,
+                        const ::wadlxsd::application& x,
                         ::xml_schema::flags f = 0);
 
   /**
@@ -11332,7 +11332,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeApplication (const ::wadl::application& x, 
+  serializeApplication (const ::wadlxsd::application& x, 
                         const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                         ::xml_schema::flags f = 0);
 
@@ -11356,7 +11356,7 @@ namespace wadl
    */
   void
   serializeDoc (::std::ostream& os,
-                const ::wadl::doc& x, 
+                const ::wadlxsd::doc& x, 
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
                 ::xml_schema::flags f = 0);
@@ -11376,7 +11376,7 @@ namespace wadl
    */
   void
   serializeDoc (::std::ostream& os,
-                const ::wadl::doc& x, 
+                const ::wadlxsd::doc& x, 
                 ::xml_schema::error_handler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
@@ -11398,7 +11398,7 @@ namespace wadl
    */
   void
   serializeDoc (::std::ostream& os,
-                const ::wadl::doc& x, 
+                const ::wadlxsd::doc& x, 
                 ::xercesc::DOMErrorHandler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
@@ -11417,7 +11417,7 @@ namespace wadl
    */
   void
   serializeDoc (::xercesc::XMLFormatTarget& ft,
-                const ::wadl::doc& x, 
+                const ::wadlxsd::doc& x, 
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
                 ::xml_schema::flags f = 0);
@@ -11438,7 +11438,7 @@ namespace wadl
    */
   void
   serializeDoc (::xercesc::XMLFormatTarget& ft,
-                const ::wadl::doc& x, 
+                const ::wadlxsd::doc& x, 
                 ::xml_schema::error_handler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
@@ -11460,7 +11460,7 @@ namespace wadl
    */
   void
   serializeDoc (::xercesc::XMLFormatTarget& ft,
-                const ::wadl::doc& x, 
+                const ::wadlxsd::doc& x, 
                 ::xercesc::DOMErrorHandler& eh,
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 const ::std::string& e = "UTF-8",
@@ -11479,7 +11479,7 @@ namespace wadl
    */
   void
   serializeDoc (::xercesc::DOMDocument& d,
-                const ::wadl::doc& x,
+                const ::wadlxsd::doc& x,
                 ::xml_schema::flags f = 0);
 
   /**
@@ -11491,7 +11491,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeDoc (const ::wadl::doc& x, 
+  serializeDoc (const ::wadlxsd::doc& x, 
                 const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                 ::xml_schema::flags f = 0);
 
@@ -11515,7 +11515,7 @@ namespace wadl
    */
   void
   serializeGrammars (::std::ostream& os,
-                     const ::wadl::grammars& x, 
+                     const ::wadlxsd::grammars& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
                      ::xml_schema::flags f = 0);
@@ -11535,7 +11535,7 @@ namespace wadl
    */
   void
   serializeGrammars (::std::ostream& os,
-                     const ::wadl::grammars& x, 
+                     const ::wadlxsd::grammars& x, 
                      ::xml_schema::error_handler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11557,7 +11557,7 @@ namespace wadl
    */
   void
   serializeGrammars (::std::ostream& os,
-                     const ::wadl::grammars& x, 
+                     const ::wadlxsd::grammars& x, 
                      ::xercesc::DOMErrorHandler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11576,7 +11576,7 @@ namespace wadl
    */
   void
   serializeGrammars (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::grammars& x, 
+                     const ::wadlxsd::grammars& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
                      ::xml_schema::flags f = 0);
@@ -11597,7 +11597,7 @@ namespace wadl
    */
   void
   serializeGrammars (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::grammars& x, 
+                     const ::wadlxsd::grammars& x, 
                      ::xml_schema::error_handler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11619,7 +11619,7 @@ namespace wadl
    */
   void
   serializeGrammars (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::grammars& x, 
+                     const ::wadlxsd::grammars& x, 
                      ::xercesc::DOMErrorHandler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11638,7 +11638,7 @@ namespace wadl
    */
   void
   serializeGrammars (::xercesc::DOMDocument& d,
-                     const ::wadl::grammars& x,
+                     const ::wadlxsd::grammars& x,
                      ::xml_schema::flags f = 0);
 
   /**
@@ -11650,7 +11650,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeGrammars (const ::wadl::grammars& x, 
+  serializeGrammars (const ::wadlxsd::grammars& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      ::xml_schema::flags f = 0);
 
@@ -11674,7 +11674,7 @@ namespace wadl
    */
   void
   serializeResources (::std::ostream& os,
-                      const ::wadl::resources& x, 
+                      const ::wadlxsd::resources& x, 
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       const ::std::string& e = "UTF-8",
                       ::xml_schema::flags f = 0);
@@ -11694,7 +11694,7 @@ namespace wadl
    */
   void
   serializeResources (::std::ostream& os,
-                      const ::wadl::resources& x, 
+                      const ::wadlxsd::resources& x, 
                       ::xml_schema::error_handler& eh,
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       const ::std::string& e = "UTF-8",
@@ -11716,7 +11716,7 @@ namespace wadl
    */
   void
   serializeResources (::std::ostream& os,
-                      const ::wadl::resources& x, 
+                      const ::wadlxsd::resources& x, 
                       ::xercesc::DOMErrorHandler& eh,
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       const ::std::string& e = "UTF-8",
@@ -11735,7 +11735,7 @@ namespace wadl
    */
   void
   serializeResources (::xercesc::XMLFormatTarget& ft,
-                      const ::wadl::resources& x, 
+                      const ::wadlxsd::resources& x, 
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       const ::std::string& e = "UTF-8",
                       ::xml_schema::flags f = 0);
@@ -11756,7 +11756,7 @@ namespace wadl
    */
   void
   serializeResources (::xercesc::XMLFormatTarget& ft,
-                      const ::wadl::resources& x, 
+                      const ::wadlxsd::resources& x, 
                       ::xml_schema::error_handler& eh,
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       const ::std::string& e = "UTF-8",
@@ -11778,7 +11778,7 @@ namespace wadl
    */
   void
   serializeResources (::xercesc::XMLFormatTarget& ft,
-                      const ::wadl::resources& x, 
+                      const ::wadlxsd::resources& x, 
                       ::xercesc::DOMErrorHandler& eh,
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       const ::std::string& e = "UTF-8",
@@ -11797,7 +11797,7 @@ namespace wadl
    */
   void
   serializeResources (::xercesc::DOMDocument& d,
-                      const ::wadl::resources& x,
+                      const ::wadlxsd::resources& x,
                       ::xml_schema::flags f = 0);
 
   /**
@@ -11809,7 +11809,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResources (const ::wadl::resources& x, 
+  serializeResources (const ::wadlxsd::resources& x, 
                       const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                       ::xml_schema::flags f = 0);
 
@@ -11833,7 +11833,7 @@ namespace wadl
    */
   void
   serializeResource (::std::ostream& os,
-                     const ::wadl::resource& x, 
+                     const ::wadlxsd::resource& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
                      ::xml_schema::flags f = 0);
@@ -11853,7 +11853,7 @@ namespace wadl
    */
   void
   serializeResource (::std::ostream& os,
-                     const ::wadl::resource& x, 
+                     const ::wadlxsd::resource& x, 
                      ::xml_schema::error_handler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11875,7 +11875,7 @@ namespace wadl
    */
   void
   serializeResource (::std::ostream& os,
-                     const ::wadl::resource& x, 
+                     const ::wadlxsd::resource& x, 
                      ::xercesc::DOMErrorHandler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11894,7 +11894,7 @@ namespace wadl
    */
   void
   serializeResource (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::resource& x, 
+                     const ::wadlxsd::resource& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
                      ::xml_schema::flags f = 0);
@@ -11915,7 +11915,7 @@ namespace wadl
    */
   void
   serializeResource (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::resource& x, 
+                     const ::wadlxsd::resource& x, 
                      ::xml_schema::error_handler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11937,7 +11937,7 @@ namespace wadl
    */
   void
   serializeResource (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::resource& x, 
+                     const ::wadlxsd::resource& x, 
                      ::xercesc::DOMErrorHandler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -11956,7 +11956,7 @@ namespace wadl
    */
   void
   serializeResource (::xercesc::DOMDocument& d,
-                     const ::wadl::resource& x,
+                     const ::wadlxsd::resource& x,
                      ::xml_schema::flags f = 0);
 
   /**
@@ -11968,7 +11968,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResource (const ::wadl::resource& x, 
+  serializeResource (const ::wadlxsd::resource& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      ::xml_schema::flags f = 0);
 
@@ -12002,7 +12002,7 @@ namespace wadl
    */
   void
   serializeResource_type (::std::ostream& os,
-                          const ::wadl::resource_type& x, 
+                          const ::wadlxsd::resource_type& x, 
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           const ::std::string& e = "UTF-8",
                           ::xml_schema::flags f = 0);
@@ -12022,7 +12022,7 @@ namespace wadl
    */
   void
   serializeResource_type (::std::ostream& os,
-                          const ::wadl::resource_type& x, 
+                          const ::wadlxsd::resource_type& x, 
                           ::xml_schema::error_handler& eh,
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           const ::std::string& e = "UTF-8",
@@ -12044,7 +12044,7 @@ namespace wadl
    */
   void
   serializeResource_type (::std::ostream& os,
-                          const ::wadl::resource_type& x, 
+                          const ::wadlxsd::resource_type& x, 
                           ::xercesc::DOMErrorHandler& eh,
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           const ::std::string& e = "UTF-8",
@@ -12063,7 +12063,7 @@ namespace wadl
    */
   void
   serializeResource_type (::xercesc::XMLFormatTarget& ft,
-                          const ::wadl::resource_type& x, 
+                          const ::wadlxsd::resource_type& x, 
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           const ::std::string& e = "UTF-8",
                           ::xml_schema::flags f = 0);
@@ -12084,7 +12084,7 @@ namespace wadl
    */
   void
   serializeResource_type (::xercesc::XMLFormatTarget& ft,
-                          const ::wadl::resource_type& x, 
+                          const ::wadlxsd::resource_type& x, 
                           ::xml_schema::error_handler& eh,
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           const ::std::string& e = "UTF-8",
@@ -12106,7 +12106,7 @@ namespace wadl
    */
   void
   serializeResource_type (::xercesc::XMLFormatTarget& ft,
-                          const ::wadl::resource_type& x, 
+                          const ::wadlxsd::resource_type& x, 
                           ::xercesc::DOMErrorHandler& eh,
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           const ::std::string& e = "UTF-8",
@@ -12125,7 +12125,7 @@ namespace wadl
    */
   void
   serializeResource_type (::xercesc::DOMDocument& d,
-                          const ::wadl::resource_type& x,
+                          const ::wadlxsd::resource_type& x,
                           ::xml_schema::flags f = 0);
 
   /**
@@ -12137,7 +12137,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResource_type (const ::wadl::resource_type& x, 
+  serializeResource_type (const ::wadlxsd::resource_type& x, 
                           const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                           ::xml_schema::flags f = 0);
 
@@ -12161,7 +12161,7 @@ namespace wadl
    */
   void
   serializeMethod (::std::ostream& os,
-                   const ::wadl::method& x, 
+                   const ::wadlxsd::method& x, 
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
                    ::xml_schema::flags f = 0);
@@ -12181,7 +12181,7 @@ namespace wadl
    */
   void
   serializeMethod (::std::ostream& os,
-                   const ::wadl::method& x, 
+                   const ::wadlxsd::method& x, 
                    ::xml_schema::error_handler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -12203,7 +12203,7 @@ namespace wadl
    */
   void
   serializeMethod (::std::ostream& os,
-                   const ::wadl::method& x, 
+                   const ::wadlxsd::method& x, 
                    ::xercesc::DOMErrorHandler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -12222,7 +12222,7 @@ namespace wadl
    */
   void
   serializeMethod (::xercesc::XMLFormatTarget& ft,
-                   const ::wadl::method& x, 
+                   const ::wadlxsd::method& x, 
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
                    ::xml_schema::flags f = 0);
@@ -12243,7 +12243,7 @@ namespace wadl
    */
   void
   serializeMethod (::xercesc::XMLFormatTarget& ft,
-                   const ::wadl::method& x, 
+                   const ::wadlxsd::method& x, 
                    ::xml_schema::error_handler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -12265,7 +12265,7 @@ namespace wadl
    */
   void
   serializeMethod (::xercesc::XMLFormatTarget& ft,
-                   const ::wadl::method& x, 
+                   const ::wadlxsd::method& x, 
                    ::xercesc::DOMErrorHandler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -12284,7 +12284,7 @@ namespace wadl
    */
   void
   serializeMethod (::xercesc::DOMDocument& d,
-                   const ::wadl::method& x,
+                   const ::wadlxsd::method& x,
                    ::xml_schema::flags f = 0);
 
   /**
@@ -12296,7 +12296,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeMethod (const ::wadl::method& x, 
+  serializeMethod (const ::wadlxsd::method& x, 
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    ::xml_schema::flags f = 0);
 
@@ -12340,7 +12340,7 @@ namespace wadl
    */
   void
   serializeInclude (::std::ostream& os,
-                    const ::wadl::include& x, 
+                    const ::wadlxsd::include& x, 
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
                     ::xml_schema::flags f = 0);
@@ -12360,7 +12360,7 @@ namespace wadl
    */
   void
   serializeInclude (::std::ostream& os,
-                    const ::wadl::include& x, 
+                    const ::wadlxsd::include& x, 
                     ::xml_schema::error_handler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12382,7 +12382,7 @@ namespace wadl
    */
   void
   serializeInclude (::std::ostream& os,
-                    const ::wadl::include& x, 
+                    const ::wadlxsd::include& x, 
                     ::xercesc::DOMErrorHandler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12401,7 +12401,7 @@ namespace wadl
    */
   void
   serializeInclude (::xercesc::XMLFormatTarget& ft,
-                    const ::wadl::include& x, 
+                    const ::wadlxsd::include& x, 
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
                     ::xml_schema::flags f = 0);
@@ -12422,7 +12422,7 @@ namespace wadl
    */
   void
   serializeInclude (::xercesc::XMLFormatTarget& ft,
-                    const ::wadl::include& x, 
+                    const ::wadlxsd::include& x, 
                     ::xml_schema::error_handler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12444,7 +12444,7 @@ namespace wadl
    */
   void
   serializeInclude (::xercesc::XMLFormatTarget& ft,
-                    const ::wadl::include& x, 
+                    const ::wadlxsd::include& x, 
                     ::xercesc::DOMErrorHandler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12463,7 +12463,7 @@ namespace wadl
    */
   void
   serializeInclude (::xercesc::DOMDocument& d,
-                    const ::wadl::include& x,
+                    const ::wadlxsd::include& x,
                     ::xml_schema::flags f = 0);
 
   /**
@@ -12475,7 +12475,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeInclude (const ::wadl::include& x, 
+  serializeInclude (const ::wadlxsd::include& x, 
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     ::xml_schema::flags f = 0);
 
@@ -12499,7 +12499,7 @@ namespace wadl
    */
   void
   serializeRequest (::std::ostream& os,
-                    const ::wadl::request& x, 
+                    const ::wadlxsd::request& x, 
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
                     ::xml_schema::flags f = 0);
@@ -12519,7 +12519,7 @@ namespace wadl
    */
   void
   serializeRequest (::std::ostream& os,
-                    const ::wadl::request& x, 
+                    const ::wadlxsd::request& x, 
                     ::xml_schema::error_handler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12541,7 +12541,7 @@ namespace wadl
    */
   void
   serializeRequest (::std::ostream& os,
-                    const ::wadl::request& x, 
+                    const ::wadlxsd::request& x, 
                     ::xercesc::DOMErrorHandler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12560,7 +12560,7 @@ namespace wadl
    */
   void
   serializeRequest (::xercesc::XMLFormatTarget& ft,
-                    const ::wadl::request& x, 
+                    const ::wadlxsd::request& x, 
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
                     ::xml_schema::flags f = 0);
@@ -12581,7 +12581,7 @@ namespace wadl
    */
   void
   serializeRequest (::xercesc::XMLFormatTarget& ft,
-                    const ::wadl::request& x, 
+                    const ::wadlxsd::request& x, 
                     ::xml_schema::error_handler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12603,7 +12603,7 @@ namespace wadl
    */
   void
   serializeRequest (::xercesc::XMLFormatTarget& ft,
-                    const ::wadl::request& x, 
+                    const ::wadlxsd::request& x, 
                     ::xercesc::DOMErrorHandler& eh,
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     const ::std::string& e = "UTF-8",
@@ -12622,7 +12622,7 @@ namespace wadl
    */
   void
   serializeRequest (::xercesc::DOMDocument& d,
-                    const ::wadl::request& x,
+                    const ::wadlxsd::request& x,
                     ::xml_schema::flags f = 0);
 
   /**
@@ -12634,7 +12634,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeRequest (const ::wadl::request& x, 
+  serializeRequest (const ::wadlxsd::request& x, 
                     const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                     ::xml_schema::flags f = 0);
 
@@ -12658,7 +12658,7 @@ namespace wadl
    */
   void
   serializeResponse (::std::ostream& os,
-                     const ::wadl::response& x, 
+                     const ::wadlxsd::response& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
                      ::xml_schema::flags f = 0);
@@ -12678,7 +12678,7 @@ namespace wadl
    */
   void
   serializeResponse (::std::ostream& os,
-                     const ::wadl::response& x, 
+                     const ::wadlxsd::response& x, 
                      ::xml_schema::error_handler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -12700,7 +12700,7 @@ namespace wadl
    */
   void
   serializeResponse (::std::ostream& os,
-                     const ::wadl::response& x, 
+                     const ::wadlxsd::response& x, 
                      ::xercesc::DOMErrorHandler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -12719,7 +12719,7 @@ namespace wadl
    */
   void
   serializeResponse (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::response& x, 
+                     const ::wadlxsd::response& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
                      ::xml_schema::flags f = 0);
@@ -12740,7 +12740,7 @@ namespace wadl
    */
   void
   serializeResponse (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::response& x, 
+                     const ::wadlxsd::response& x, 
                      ::xml_schema::error_handler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -12762,7 +12762,7 @@ namespace wadl
    */
   void
   serializeResponse (::xercesc::XMLFormatTarget& ft,
-                     const ::wadl::response& x, 
+                     const ::wadlxsd::response& x, 
                      ::xercesc::DOMErrorHandler& eh,
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      const ::std::string& e = "UTF-8",
@@ -12781,7 +12781,7 @@ namespace wadl
    */
   void
   serializeResponse (::xercesc::DOMDocument& d,
-                     const ::wadl::response& x,
+                     const ::wadlxsd::response& x,
                      ::xml_schema::flags f = 0);
 
   /**
@@ -12793,7 +12793,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeResponse (const ::wadl::response& x, 
+  serializeResponse (const ::wadlxsd::response& x, 
                      const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                      ::xml_schema::flags f = 0);
 
@@ -12827,7 +12827,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::std::ostream& os,
-                           const ::wadl::representation& x, 
+                           const ::wadlxsd::representation& x, 
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            const ::std::string& e = "UTF-8",
                            ::xml_schema::flags f = 0);
@@ -12847,7 +12847,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::std::ostream& os,
-                           const ::wadl::representation& x, 
+                           const ::wadlxsd::representation& x, 
                            ::xml_schema::error_handler& eh,
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            const ::std::string& e = "UTF-8",
@@ -12869,7 +12869,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::std::ostream& os,
-                           const ::wadl::representation& x, 
+                           const ::wadlxsd::representation& x, 
                            ::xercesc::DOMErrorHandler& eh,
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            const ::std::string& e = "UTF-8",
@@ -12888,7 +12888,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::xercesc::XMLFormatTarget& ft,
-                           const ::wadl::representation& x, 
+                           const ::wadlxsd::representation& x, 
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            const ::std::string& e = "UTF-8",
                            ::xml_schema::flags f = 0);
@@ -12909,7 +12909,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::xercesc::XMLFormatTarget& ft,
-                           const ::wadl::representation& x, 
+                           const ::wadlxsd::representation& x, 
                            ::xml_schema::error_handler& eh,
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            const ::std::string& e = "UTF-8",
@@ -12931,7 +12931,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::xercesc::XMLFormatTarget& ft,
-                           const ::wadl::representation& x, 
+                           const ::wadlxsd::representation& x, 
                            ::xercesc::DOMErrorHandler& eh,
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            const ::std::string& e = "UTF-8",
@@ -12950,7 +12950,7 @@ namespace wadl
    */
   void
   serializeRepresentation (::xercesc::DOMDocument& d,
-                           const ::wadl::representation& x,
+                           const ::wadlxsd::representation& x,
                            ::xml_schema::flags f = 0);
 
   /**
@@ -12962,7 +12962,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeRepresentation (const ::wadl::representation& x, 
+  serializeRepresentation (const ::wadlxsd::representation& x, 
                            const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                            ::xml_schema::flags f = 0);
 
@@ -13006,7 +13006,7 @@ namespace wadl
    */
   void
   serializeParam (::std::ostream& os,
-                  const ::wadl::param& x, 
+                  const ::wadlxsd::param& x, 
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   const ::std::string& e = "UTF-8",
                   ::xml_schema::flags f = 0);
@@ -13026,7 +13026,7 @@ namespace wadl
    */
   void
   serializeParam (::std::ostream& os,
-                  const ::wadl::param& x, 
+                  const ::wadlxsd::param& x, 
                   ::xml_schema::error_handler& eh,
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   const ::std::string& e = "UTF-8",
@@ -13048,7 +13048,7 @@ namespace wadl
    */
   void
   serializeParam (::std::ostream& os,
-                  const ::wadl::param& x, 
+                  const ::wadlxsd::param& x, 
                   ::xercesc::DOMErrorHandler& eh,
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   const ::std::string& e = "UTF-8",
@@ -13067,7 +13067,7 @@ namespace wadl
    */
   void
   serializeParam (::xercesc::XMLFormatTarget& ft,
-                  const ::wadl::param& x, 
+                  const ::wadlxsd::param& x, 
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   const ::std::string& e = "UTF-8",
                   ::xml_schema::flags f = 0);
@@ -13088,7 +13088,7 @@ namespace wadl
    */
   void
   serializeParam (::xercesc::XMLFormatTarget& ft,
-                  const ::wadl::param& x, 
+                  const ::wadlxsd::param& x, 
                   ::xml_schema::error_handler& eh,
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   const ::std::string& e = "UTF-8",
@@ -13110,7 +13110,7 @@ namespace wadl
    */
   void
   serializeParam (::xercesc::XMLFormatTarget& ft,
-                  const ::wadl::param& x, 
+                  const ::wadlxsd::param& x, 
                   ::xercesc::DOMErrorHandler& eh,
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   const ::std::string& e = "UTF-8",
@@ -13129,7 +13129,7 @@ namespace wadl
    */
   void
   serializeParam (::xercesc::DOMDocument& d,
-                  const ::wadl::param& x,
+                  const ::wadlxsd::param& x,
                   ::xml_schema::flags f = 0);
 
   /**
@@ -13141,7 +13141,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeParam (const ::wadl::param& x, 
+  serializeParam (const ::wadlxsd::param& x, 
                   const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                   ::xml_schema::flags f = 0);
 
@@ -13165,7 +13165,7 @@ namespace wadl
    */
   void
   serializeOption (::std::ostream& os,
-                   const ::wadl::option& x, 
+                   const ::wadlxsd::option& x, 
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
                    ::xml_schema::flags f = 0);
@@ -13185,7 +13185,7 @@ namespace wadl
    */
   void
   serializeOption (::std::ostream& os,
-                   const ::wadl::option& x, 
+                   const ::wadlxsd::option& x, 
                    ::xml_schema::error_handler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -13207,7 +13207,7 @@ namespace wadl
    */
   void
   serializeOption (::std::ostream& os,
-                   const ::wadl::option& x, 
+                   const ::wadlxsd::option& x, 
                    ::xercesc::DOMErrorHandler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -13226,7 +13226,7 @@ namespace wadl
    */
   void
   serializeOption (::xercesc::XMLFormatTarget& ft,
-                   const ::wadl::option& x, 
+                   const ::wadlxsd::option& x, 
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
                    ::xml_schema::flags f = 0);
@@ -13247,7 +13247,7 @@ namespace wadl
    */
   void
   serializeOption (::xercesc::XMLFormatTarget& ft,
-                   const ::wadl::option& x, 
+                   const ::wadlxsd::option& x, 
                    ::xml_schema::error_handler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -13269,7 +13269,7 @@ namespace wadl
    */
   void
   serializeOption (::xercesc::XMLFormatTarget& ft,
-                   const ::wadl::option& x, 
+                   const ::wadlxsd::option& x, 
                    ::xercesc::DOMErrorHandler& eh,
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    const ::std::string& e = "UTF-8",
@@ -13288,7 +13288,7 @@ namespace wadl
    */
   void
   serializeOption (::xercesc::DOMDocument& d,
-                   const ::wadl::option& x,
+                   const ::wadlxsd::option& x,
                    ::xml_schema::flags f = 0);
 
   /**
@@ -13300,7 +13300,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeOption (const ::wadl::option& x, 
+  serializeOption (const ::wadlxsd::option& x, 
                    const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                    ::xml_schema::flags f = 0);
 
@@ -13324,7 +13324,7 @@ namespace wadl
    */
   void
   serializeLink (::std::ostream& os,
-                 const ::wadl::link& x, 
+                 const ::wadlxsd::link& x, 
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  const ::std::string& e = "UTF-8",
                  ::xml_schema::flags f = 0);
@@ -13344,7 +13344,7 @@ namespace wadl
    */
   void
   serializeLink (::std::ostream& os,
-                 const ::wadl::link& x, 
+                 const ::wadlxsd::link& x, 
                  ::xml_schema::error_handler& eh,
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  const ::std::string& e = "UTF-8",
@@ -13366,7 +13366,7 @@ namespace wadl
    */
   void
   serializeLink (::std::ostream& os,
-                 const ::wadl::link& x, 
+                 const ::wadlxsd::link& x, 
                  ::xercesc::DOMErrorHandler& eh,
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  const ::std::string& e = "UTF-8",
@@ -13385,7 +13385,7 @@ namespace wadl
    */
   void
   serializeLink (::xercesc::XMLFormatTarget& ft,
-                 const ::wadl::link& x, 
+                 const ::wadlxsd::link& x, 
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  const ::std::string& e = "UTF-8",
                  ::xml_schema::flags f = 0);
@@ -13406,7 +13406,7 @@ namespace wadl
    */
   void
   serializeLink (::xercesc::XMLFormatTarget& ft,
-                 const ::wadl::link& x, 
+                 const ::wadlxsd::link& x, 
                  ::xml_schema::error_handler& eh,
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  const ::std::string& e = "UTF-8",
@@ -13428,7 +13428,7 @@ namespace wadl
    */
   void
   serializeLink (::xercesc::XMLFormatTarget& ft,
-                 const ::wadl::link& x, 
+                 const ::wadlxsd::link& x, 
                  ::xercesc::DOMErrorHandler& eh,
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  const ::std::string& e = "UTF-8",
@@ -13447,7 +13447,7 @@ namespace wadl
    */
   void
   serializeLink (::xercesc::DOMDocument& d,
-                 const ::wadl::link& x,
+                 const ::wadlxsd::link& x,
                  ::xml_schema::flags f = 0);
 
   /**
@@ -13459,7 +13459,7 @@ namespace wadl
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  serializeLink (const ::wadl::link& x, 
+  serializeLink (const ::wadlxsd::link& x, 
                  const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
                  ::xml_schema::flags f = 0);
 
