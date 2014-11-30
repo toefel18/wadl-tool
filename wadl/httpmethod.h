@@ -1,6 +1,8 @@
 #ifndef HTTPMETHOD_H
 #define HTTPMETHOD_H
 
+#include <string>
+
 namespace wadl {
 
     enum class HttpMethod {
@@ -13,6 +15,9 @@ namespace wadl {
         TRACE,
         CONNECT
     };
+
+    HttpMethod toHttpMethod(const std::string& name);
+    std::string toString(HttpMethod method);
 
 }
 #endif // HTTPMETHOD_H

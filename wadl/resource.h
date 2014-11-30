@@ -5,6 +5,7 @@
 #include<string>
 
 #include "method.h"
+#include "param.h"
 
 namespace wadl {
 
@@ -12,21 +13,33 @@ namespace wadl {
     {
     public:
 
-        typedef std::vector<Method> Methods;
+        typedef std::vector<Method*> Methods;
+        typedef std::vector<Resource*> Resources;
+        typedef std::vector<Param> Params;
 
-        /**
-         * @brief methods container
-         */
-
-        Resource(const std::string& uri);
+        Resource(const std::string &uri);
+        Resource(const std::string &uri, Resource* parent);
 
         const Methods& getMethods() const;
         Methods& getMethods();
         std::string getUri();
+        std::string getFullPath();
 
+        Resource* getParent();
+        const Resources& getChildren() const;
+        Resources& getChildren();
+        Resources getDescendants() const;
+
+
+        const Params& getParams() const;
+        Params& getParams();
     private:
+
         Methods methods;
         std::string uri;
+        Resource *parent;
+        Resources children;
+        Params params;
     };
 }
 

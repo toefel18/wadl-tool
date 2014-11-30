@@ -1,27 +1,22 @@
 #ifndef METHOD_H
 #define METHOD_H
 
-#include <vector>
-
 #include "httpmethod.h"
-#include "queryparam.h"
+#include "param.h"
+
+#include <string>
 
 namespace wadl {
 
     class Method {
     public:
+        Method(const std::string& id, HttpMethod httpMethod);
 
-        typedef std::vector<QueryParam> QueryParams;
-        Method();
-        Method(HttpMethod httpMethod);
-
-        const QueryParams& getQueryParams() const;
-        QueryParams& getQueryParams();
         HttpMethod getHttpMethod() const;
         void setHttpMethod(HttpMethod httpMethod);
 
     private:
-        QueryParams queryParams;
+        std::string id;
         HttpMethod httpMethod;
     };
 

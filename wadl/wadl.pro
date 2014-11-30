@@ -1,17 +1,16 @@
 TEMPLATE = lib
 TARGET = wadl
 
-CONFIG += static
+CONFIG += dynamic
 
 QMAKE_CXXFLAGS += -std=c++11
 
 INCLUDEPATH += "C:\xerces-c-3.1.1\src" \
-               "C:\xsd-4.0.0-i686-windows\libxsd"
+               "C:\xsd-4.0.0-i686-windows\libxsd" \
+               "C:\boost_1_56_0"
 
 LIBS += -L"C:\xerces-c-3.1.1\src\.libs" \
         -lxerces-c
-
-SUBDIRS = model
 
 HEADERS += \
     wadl.hxx \
@@ -20,8 +19,10 @@ HEADERS += \
     restapp.h \
     resource.h \
     method.h \
-    queryparam.h \
-    httpmethod.h
+    httpmethod.h \
+    param.h \
+    wadlparseexception.h \
+    pathhelper.h
 
 SOURCES += \
     wadl.cxx \
@@ -30,4 +31,7 @@ SOURCES += \
     restapp.cpp \
     resource.cpp \
     method.cpp \
-    queryparam.cpp
+    httpmethod.cpp \
+    param.cpp \
+    wadlparseexception.cpp \
+    pathhelper.cpp

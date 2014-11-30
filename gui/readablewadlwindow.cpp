@@ -13,13 +13,17 @@ ReadableWadlWindow::ReadableWadlWindow(QWidget *parent) :
     ui->setupUi(this);
 
     wadl::ModelParser parser;
-//    parser.parseXml();
-    wadl::RestApp app = parser.parseWadl("dummy");
-    app.getResources();
+    wadl::RestApp *app = parser.parseWadl("dummy");
+    for (wadl::Resource* res : app->getAllResources()) {
+        cout << res->getFullPath() << endl;
+    }
+
 }
 
 ReadableWadlWindow::~ReadableWadlWindow()
 {
     delete ui;
 }
+
+
 

@@ -7,6 +7,8 @@
 
 namespace wadlxsd {
     class resource;
+    class method;
+    class param;
 }
 
 namespace wadl {
@@ -14,18 +16,22 @@ namespace wadl {
     class ModelParser {
     public:
         ModelParser();
-
-        void parseXml();
-
-        RestApp parseWadl(const std::string& location);
+        RestApp* parseWadl(const std::string& location);
 
     private:
 
-        void addResource(RestApp& app, Resource& parent);
+        Resource *createResource(wadlxsd::resource wadlResource, const std::string& basePath);
+        void createChildResource(wadlxsd::resource wadlResource, Resource *parent);
+        void configureResource(wadlxsd::resource wadlResource, Resource *resource);
 
+        std::vector<Method*> extractMethods(wadlxsd::resource wadlResource);
+        Method* createMethod(wadlxsd::method wadlMethod);
 
-        void printResource(std::string prefix, wadlxsd::resource resource);
-        std::string extractMethods(wadlxsd::resource method);
+        std::vector<Param> extractParams(wadlxsd::resource wadlResource);
+        Param createParam(wadlxsd::param wadlParam);
+
+//        void printResource(std::string prefix, wadlxsd::resource resource);
+        //        std::string extractMethods(wadlxsd::resource method);
     };
 
 }

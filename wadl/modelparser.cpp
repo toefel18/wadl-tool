@@ -4,6 +4,7 @@
 #include <xsd/cxx/parser/validating/parser.hxx>
 
 #include "wadl.hxx"
+#include "wadlparseexception.h"
 
 #include <memory>
 #include <iostream>
@@ -17,66 +18,78 @@ namespace wadl {
     {
     }
 
-    void ModelParser::parseXml(){
+    RestApp* ModelParser::parseWadl(const string &location) {
         try {
-
             unique_ptr<wadlxsd::application> wadlParse(wadlxsd::parseApplication("D:/projects-cpp/wadltool/resources/application.wadl", xml_schema::flags::dont_validate)); // xml_schema::flags::dont_validate
-            shared_ptr<wadlxsd::application> app(std::move(wadlParse)); //convert to shared ptr for code completion to work
+            shared_ptr<wadlxsd::application> wadlApp(std::move(wadlParse)); //convert to shared ptr for code completion to work
 
-            //foreach (auto resourcesItr, app->getResources()) { // also works!
-           for (auto resourcesItr = app->getResources().begin(); resourcesItr != app->getResources().end(); ++resourcesItr){
-                cout << resourcesItr->getBase() << endl;
-                for (auto resourceItr = resourcesItr->getResource().begin(); resourceItr != resourcesItr->getResource().end(); ++resourceItr) {
-                    string path = resourcesItr->getBase().get();
-                    path.pop_back();
-                    printResource(path, *resourceItr);
+            RestApp* app = new RestApp(location);
+            for (auto wadlResources : wadlApp->getResources()) {
+                std::string resourcesBase = *wadlResources.getBase();
+                for (auto wadlResource : wadlResources.getResource()) {
+                    Resource* resource = createResource(wadlResource, resourcesBase);
+                    app->getResources().push_back(resource);
                 }
             }
+            return app;
         } catch (const xml_schema::exception& e) {
             cerr << e << endl;
-        }
-
-    }
-
-    void ModelParser::printResource(string prefix, wadlxsd::resource resource) {
-        string path = "";
-        if(resource.getPath()) {
-            path = resource.getPath().get();
-        }
-
-        cout << prefix << path << extractMethods(resource) << endl;
-
-        for (wadlxsd::resources::resource_const_iterator resourceItr = resource.getResource1().begin(); resourceItr != resource.getResource1().end(); ++resourceItr) {
-            printResource(prefix + path, *resourceItr);
+            throw new WadlParseException(e.what(), __FILE__, __LINE__);
         }
     }
 
-    string ModelParser::extractMethods(wadlxsd::resource resource) {
-        auto methods = resource.getMethod();
+    Resource* ModelParser::createResource(wadlxsd::resource wadlResource, const std::string& basePath) {
+        Resource* resource = new Resource(basePath + *wadlResource.getPath());
+        configureResource(wadlResource, resource);
+        return resource;
+    }
 
-        string methodSum = "   ";
-        for(wadlxsd::resource::method_const_iterator method = methods.begin(); method != methods.end(); ++method) {
-            methodSum += method->getName().get() + " " + method->getId().get() + "()   ";
+    void ModelParser::createChildResource(wadlxsd::resource wadlResource, Resource *parent) {
+        Resource* resource = new Resource(*wadlResource.getPath(), parent); // adds itself to children of parent
+        configureResource(wadlResource, resource);
+    }
+
+
+    void ModelParser::configureResource(wadlxsd::resource wadlResource, Resource *resource) {
+        std::vector<Method *> extractedMethods = extractMethods(wadlResource);
+        resource->getMethods().insert(resource->getMethods().end(), extractedMethods.begin(), extractedMethods.end());
+
+        std::vector<Param> params = extractParams(wadlResource);
+        std::vector<Param> &rParams = resource->getParams();
+        rParams.insert(rParams.end(), params.begin(), params.end());
+
+        for (auto childResource: wadlResource.getResource1()) {
+            createChildResource(childResource, resource);
         }
-        return methodSum;
     }
 
 
-    RestApp ModelParser::parseWadl(const string &location) {
-        RestApp app;
-
-        Resource resource("test");
-        Method method(HttpMethod::GET);
-        QueryParam queryParam("start", "string");
-        method.getQueryParams().push_back(queryParam);
-        resource.getMethods().push_back(method);
-        app.getResources().push_back(resource);
-
-        return app;
+    std::vector<Method *> ModelParser::extractMethods(wadlxsd::resource wadlResource) {
+        std::vector<Method *> methods;
+        for (auto wadlMethod: wadlResource.getMethod()) {
+            Method *method = createMethod(wadlMethod);
+            methods.push_back(method);
+        }
+        return methods;
     }
 
-    void ModelParser::addResource(RestApp &app, Resource &parent){
+    Method *ModelParser::createMethod(wadlxsd::method wadlMethod) {
+        Method * method = new Method(*wadlMethod.getId(), toHttpMethod(*wadlMethod.getName()));
+        return method;
+    }
 
+
+    std::vector<Param> ModelParser::extractParams(wadlxsd::resource wadlResource)  {
+        std::vector<Param> params;
+        for (auto wadlParam: wadlResource.getParam()) {
+            Param param = createParam(wadlParam);
+            params.push_back(param);
+        }
+        return params;
+    }
+
+    Param ModelParser::createParam(wadlxsd::param wadlParam) {
+        return Param(*wadlParam.getName(), *wadlParam.getStyle(), wadlParam.getType().text_content());
     }
 
 }

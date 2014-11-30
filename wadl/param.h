@@ -5,16 +5,18 @@
 
 namespace wadl {
 
-    class QueryParam
+    class Param
     {
     public:
-        QueryParam(const std::string& name, const std::string& type);
+        Param(const std::string& name, const std::string& style, const std::string& type);
 
         std::string getName() const;
+        std::string getStyle() const;
         std::string getType() const;
 
     private:
         std::string name;
+        std::string style;
         std::string type;
     };
 
